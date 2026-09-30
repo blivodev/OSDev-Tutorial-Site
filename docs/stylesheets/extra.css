@@ -1,0 +1,21 @@
+/* OSDev Learning Hub — extra styles */
+
+/* Make Mermaid diagrams render nicely with a subtle background. */
+.mermaid {
+  background: var(--md-code-bg-color, #f6f8fa);
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+/* Slightly emphasize glossary tooltip links (title attributes). */
+[title] {
+  cursor: help;
+}
+
+/* Nicer table borders. */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest, #eef0f2);
+}
