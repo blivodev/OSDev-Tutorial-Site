@@ -1,6 +1,6 @@
 site_name: OSDev Learning Hub
 site_description: A beginner-friendly Operating System development learning resource — tutorials, glossary, and a 5-language "Hello World" OS.
-site_url: https://os.sektor9.dev/
+site_url: https://osdev.sektor9.dev/
 repo_url: https://github.com/YOUR_USERNAME/OSDev-Tutorial-Site
 edit_uri: ""
 
@@ -68,6 +68,55 @@ markdown_extensions:
 
 plugins:
   - search
+
+# ---- Clean, language-first navigation -------------------------------
+# Pick ONE language and continue in it; the sidebar stays tidy.
+nav:
+  - Home: index.md
+  - Choose a Path: paths/index.md
+  - Language Paths:
+      - "C":
+          - C Path: paths/c/index.md
+          - "Beginnings: Learn C with OS-dev in mind": paths/c/beginner.md
+          - "Chapter: Hello World kernel in C": synthesized_tutorials/01-c/README.md
+          - "Reference: OSDev Bare Bones (C)": path_c_os/Bare_Bones_C.md
+      - "C++":
+          - C++ Path: paths/cpp/index.md
+          - "Beginnings: Learn C++ with OS-dev in mind": paths/cpp/beginner.md
+          - "Chapter: Hello World kernel in C++": synthesized_tutorials/03-cpp/README.md
+          - "Reference: OSDev Bare Bones (C++)": path_cpp_os/Bare_Bones_Cpp.md
+      - "Rust":
+          - Rust Path: paths/rust/index.md
+          - "Beginnings: Learn Rust with OS-dev in mind": paths/rust/beginner.md
+          - "Chapter: Hello World kernel in Rust": synthesized_tutorials/02-rust/README.md
+          - "Reference: Writing an OS in Rust": path_rust_os/README.md
+      - "Go":
+          - Go Path: paths/go/index.md
+          - "Beginnings: Learn Go with OS-dev in mind": paths/go/beginner.md
+          - "Chapter: Hello World kernel in Go": synthesized_tutorials/04-go/README.md
+          - "Reference: OSDev Go Bare Bones": path_go_os/Go_Bare_Bones.md
+      - "C#":
+          - C# Path: paths/csharp/index.md
+          - "Beginnings: Learn C# with OS-dev in mind": paths/csharp/beginner.md
+          - "Chapter: Hello World kernel in C#": synthesized_tutorials/05-csharp/README.md
+          - "Reference: Cosmos OS": path_csharp_os/README.md
+  - Core OS Concepts:
+      - "How a computer boots": synthesized_tutorials/00-introduction/01-how-a-computer-boots.md
+      - "Your toolchain": synthesized_tutorials/00-introduction/02-your-toolchain.md
+      - "Bootloaders & Multiboot": synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md
+      - "Memory management": synthesized_tutorials/concepts/02-memory-management.md
+      - "Interrupts & the IDT": synthesized_tutorials/concepts/03-interrupts-and-the-idt.md
+      - "VGA text mode": synthesized_tutorials/concepts/04-vga-text-mode.md
+      - "The Hello-World recipe": synthesized_tutorials/concepts/05-the-hello-world-of-oses.md
+  - Example OS Project:
+      - Example_OS_Project/README.md
+      - "Setup & build guide": Example_OS_Project/docs/setup.md
+      - "Phoenix Code setup": Example_OS_Project/docs/phoenix-code.md
+      - "Rust project": Example_OS_Project/rust/README.md
+      - "Go project": Example_OS_Project/go/README.md
+      - "C# project": Example_OS_Project/csharp/README.md
+  - Glossary: GLOSSARY/README.md
+  - Resources: resources/INDEX.md
 
 extra:
   generator: false

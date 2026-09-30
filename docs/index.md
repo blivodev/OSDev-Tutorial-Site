@@ -1,60 +1,52 @@
 # OSDev Learning Hub
 
-A **beginner-friendly Operating System development learning resource and workspace** — a full
-tutorial course, an interlinked glossary with hover-tooltips, a 5-language *"Hello World"* OS you
-can build, and curated video self-study links for every topic.
+A **beginner-friendly Operating System development learning resource** — pick a programming
+language, learn it with OS-dev built right in, and build a bootable **"Hello World"** kernel.
+Plus an interlinked glossary (hover-tooltips), a 5-language example OS, and curated video
+self-study for every topic.
 
-> 🔒 This site is private and login-protected (HTTP Basic Auth) — only the owner can view it.
+> 🔒 This site is private and login-protected — only the owner can view it.
 
 ---
 
-## 🎓 Start learning
+## 🎯 Start here: choose your language
+Pick **one** language and follow its whole track — you don't have to read the others.
 
-### 1. The Synthesized Beginner's Guide
-The core course — original tutorials that take you from basic language syntax to real OS concepts.
+→ **[Choose a Path (C, C++, Rust, Go, or C#)](paths/index.md)**
 
-- [Introduction: How a computer boots](synthesized_tutorials/00-introduction/01-how-a-computer-boots.md)
-- [Introduction: Your toolchain](synthesized_tutorials/00-introduction/02-your-toolchain.md)
+---
 
-**Shared concepts** (the ideas every language version uses):
-- [Bootloaders & the Multiboot protocol](synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md)
+## 📚 What's here
+
+- **Language Paths** — beginner tutorials (synthesized with OS-dev) → the Hello-World kernel
+  chapter → reference, all in one coherent track per language.
+- **Core OS Concepts** — boot, bootloaders/Multiboot, memory, interrupts/IDT, VGA — the
+  language-agnostic theory, read alongside any path.
+- **Example OS Project** — a real bootable OS in C, C++, Rust, Go, and C# (C & C++ verified
+  booting in QEMU).
+- **Glossary** — every term linked with a hover-tooltip definition and a full page.
+- **Video self-study** — each page ends with real YouTube links for that topic.
+
+---
+
 - [Memory management](synthesized_tutorials/concepts/02-memory-management.md)
 - [Interrupts & the IDT](synthesized_tutorials/concepts/03-interrupts-and-the-idt.md)
-- [VGA text mode](synthesized_tutorials/concepts/04-vga-text-mode.md)
-- [The "Hello World of OSes" recipe](synthesized_tutorials/concepts/05-the-hello-world-of-oses.md)
-
-**Build it in your language of choice:**
-- [C](synthesized_tutorials/01-c/README.md) ·
-  [Rust](synthesized_tutorials/02-rust/README.md) ·
-  [C++](synthesized_tutorials/03-cpp/README.md) ·
-  [Go](synthesized_tutorials/04-go/README.md) ·
-  [C#](synthesized_tutorials/05-csharp/README.md)
-
-### 2. The Glossary
-Every technical term in these tutorials is **linked**: hover a term for a tooltip summary, click it
-to open a full page with diagrams and videos.
-
-- [Browse the glossary index](GLOSSARY/README.md)
-
-### 3. The Example OS Project
-A minimal bootable OS in C, C++, Rust, Go, and C# — fully commented, with build scripts and docs.
+## 🧪 Example OS Project
+A minimal bootable OS in C, C++, Rust, Go, and C# — fully commented, with build scripts and
+QEMU boot verification (C & C++ kernels confirmed booting and printing "Hello World!").
 
 - [Example_OS_Project overview](Example_OS_Project/README.md) ·
   [Setup & build guide](Example_OS_Project/docs/setup.md) ·
   [Phoenix Code setup](Example_OS_Project/docs/phoenix-code.md)
 
-### 4. Path reference docs
-Curated free resources by language:
-[C](path_c_os/README.md) · [C++](path_cpp_os/README.md) · [Rust](path_rust_os/README.md) ·
-[Go](path_go_os/README.md) · [C#](path_csharp_os/README.md) · [Resource index](resources/INDEX.md)
-
----
+## 🔍 The Glossary
+Every technical term is **linked**: hover for a tooltip definition, click for a full page with
+diagrams and videos. [Browse the glossary index](GLOSSARY/README.md).
 
 ## 🎥 Video self-study
-Almost every page ends with a **"Watch & learn"** section of real, verified YouTube videos matched
-to that topic (e.g. the memory chapter links memory-overview, memory-in-C++, and
-memory-in-computer-architecture videos).
+Almost every page ends with a **"Watch & learn"** section of real, verified YouTube videos
+matched to that topic. Curated free resources by language live in the
+[Resource index](resources/INDEX.md).
 
 ---
-
 *Built with MkDocs Material · source: [OSDev-Tutorial-Site](https://github.com/YOUR_USERNAME/OSDev-Tutorial-Site) (private)*
