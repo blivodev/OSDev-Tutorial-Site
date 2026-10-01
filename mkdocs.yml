@@ -126,6 +126,11 @@ nav:
       - "Language: C#": resources/curated/language-csharp.md
       - Computer Architecture: resources/curated/computer-architecture.md
       - Systems Programming: resources/curated/systems-programming.md
+      - "RISC-V": resources/curated/riscv.md
+      - "Other Architectures (AVR/ESP32/ARM/MIPS/OpenRISC)": resources/curated/architectures.md
+      - "Tooling & Toolchains": resources/curated/tooling.md
+      - "Practice & Projects": resources/curated/practice.md
+      - "Learn by Difficulty": resources/curated/learn-by-difficulty.md
       - Videos: resources/curated/videos.md
       - Communities: resources/curated/communities.md
       - "Core per-path material": resources/INDEX.md

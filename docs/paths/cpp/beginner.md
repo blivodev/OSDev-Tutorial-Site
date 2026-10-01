@@ -218,3 +218,35 @@ All verified and beginner-friendly:
 - [Stack vs Heap Memory in C++](https://www.youtube.com/watch?v=wJ1L2nSIV1s)
 - [REFERENCES in C++](https://www.youtube.com/watch?v=IzoFn3dfsPA)
 - [CLASSES in C++](https://www.youtube.com/watch?v=2BP8NhxjrO0)
+
+
+---
+
+## 🎬 Watch C++ in action
+
+These are real, verified videos from The Cherno's series, paired with the sections above. Click each to expand and watch inline:
+
+<details class="video-embed"><summary>▶ Watch: How C++ Works — compilers & linkers (The Cherno)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/SfGuIVzE_Os" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Pointers in C++ (The Cherno)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/DTxHyVn0ODg" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Stack vs Heap Memory in C++ (The Cherno)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/wJ1L2nSIV1s" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Classes in C++ (The Cherno)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/2BP8NhxjrO0" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+---
+
+## 🔗 Further resources (C++)
+
+- [C++ reference — cppreference.com](https://en.cppreference.com/w/) — the definitive reference for the C++ standard library and language.
+- [LearnCpp.com](https://www.learncpp.com/) — a free, thorough, beginner-to-advanced online C++ tutorial.
+- [The Cherno — C++ playlist](https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb) — the video series this path recommends, in order.
+- [isocpp.org](https://isocpp.org/) — the official home of the C++ standard, FAQs, and community resources.
+- [OSDev Wiki — C++ Bare Bones](https://wiki.osdev.org/C%2B%2B_Bare_Bones) — the canonical C++ kernel tutorial, with the exact freestanding compiler flags.
+- [cppreference — C++ language](https://en.cppreference.com/w/cpp/language) — the language grammar, objects, and memory model in one place.
+

@@ -247,3 +247,32 @@ tutorial with the actual, working `Example_OS_Project/rust/` kernel, including
 compiling it with `cargo bootimage` and booting it in QEMU. After that, come
 back to this path's landing page and work through the core OS concepts and the
 full "Writing an OS in Rust" reference.
+
+
+---
+
+## 🎬 Watch Rust in action
+
+These are real, verified videos that complement the concepts above. Click each to expand and watch inline:
+
+<details class="video-embed"><summary>▶ Watch: Writing an OS in Rust — Part 1: A Freestanding Rust Binary</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/rH5jnbJ3tL4" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Ownership in Rust (full tutorial)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/9VBLOwmNE1g" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: References & Borrowing in Rust</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/Q_0yoX07Fhs" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+---
+
+## 🔗 Further resources (Rust)
+
+- [The Rust Book](https://doc.rust-lang.org/book/) — the official free Rust programming language book (Ownership & Borrowing are Chapters 4–5).
+- [Philipp Oppermann — "Writing an OS in Rust"](https://os.phil-opp.com/) — the canonical, free, blog-based course this path follows.
+- [Learn Rust](https://www.rust-lang.org/learn) — the official hub: book, course, exercises, and more.
+- [OSDev Wiki — Rust Bare Bones](https://wiki.osdev.org/Rust_Bare_Bones) — a second, Limine-based Rust kernel tutorial.
+- [Rust on bare metal: rustup / cargo docs](https://doc.rust-lang.org/cargo/) — how Cargo and rustup drive your cross-target kernel builds.
+- [The `no_std` reference — The Embedded Rust Book](https://docs.rust-embedded.org/book/intro/no-std.html) — details on `no_std` and freestanding binaries.
+

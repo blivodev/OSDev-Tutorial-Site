@@ -39,4 +39,35 @@ when). If you want the theory first:
 
 - [Glossary (hover-tooltips for every term)](../GLOSSARY/README.md)
 - [Example OS project (C, C++, Rust, Go, C#)](../Example_OS_Project/README.md)
-- [Resource index & video collection](../resources/INDEX/)
+- [Resource index & video collection](../resources/INDEX.md)
+
+
+---
+
+## 🎬 Start with a video
+
+Not sure where to begin? These are real, verified videos that give the big picture across the whole site's topic — watch one before picking a path:
+
+<details class="video-embed"><summary>▶ Watch: How a computer boots & why OS dev matters (overview)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/F9-yqoS7b8w" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+<details class="video-embed"><summary>▶ Watch: Writing an OS in Rust — a freestanding binary walkthrough</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/rH5jnbJ3tL4" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+<details class="video-embed"><summary>▶ Watch: The Operating System Construction Kit — Cosmos (C#)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/Khff1xxyEHI" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+---
+
+## 🔗 Further resources (across all paths)
+
+- [OSDev Wiki — Expanded Main Page](https://wiki.osdev.org/) — the community's central hub for OS development.
+- [OSDev Wiki — Bare Bones](https://wiki.osdev.org/Bare_Bones) — the classic first kernel tutorial, in C.
+- [Learn the language you'll build in](https://go.dev/tour/) — each path's beginner tutorial links a free official language course.
+- [Philipp Oppermann — "Writing an OS in Rust"](https://os.phil-opp.com/) — a free, modern, blog-based kernel course.
+- [Cosmos OS](https://www.gocosmos.org/) — the C# operating system construction kit.
+- [Resource index & video collection](../resources/INDEX.md) — the site's own curated video and reading list.
+- [Glossary (hover-tooltips for every term)](../GLOSSARY/README.md) — every OS term you'll meet, defined.
