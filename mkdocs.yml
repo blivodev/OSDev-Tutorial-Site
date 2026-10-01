@@ -116,7 +116,19 @@ nav:
       - "Go project": Example_OS_Project/go/README.md
       - "C# project": Example_OS_Project/csharp/README.md
   - Glossary: GLOSSARY/README.md
-  - Resources: resources/INDEX.md
+  - Resources:
+      - "Curated Library (bookmarks)": resources/curated/README.md
+      - OS Development: resources/curated/os-development.md
+      - "Language: C": resources/curated/language-c.md
+      - "Language: C++": resources/curated/language-cpp.md
+      - "Language: Rust": resources/curated/language-rust.md
+      - "Language: Go": resources/curated/language-go.md
+      - "Language: C#": resources/curated/language-csharp.md
+      - Computer Architecture: resources/curated/computer-architecture.md
+      - Systems Programming: resources/curated/systems-programming.md
+      - Videos: resources/curated/videos.md
+      - Communities: resources/curated/communities.md
+      - "Core per-path material": resources/INDEX.md
 
 extra:
   generator: false
