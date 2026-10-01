@@ -48,5 +48,10 @@ Almost every page ends with a **"Watch & learn"** section of real, verified YouT
 matched to that topic. Curated free resources by language live in the
 [Resource index](resources/INDEX.md).
 
+## 🔖 Curated Resource Library
+A big, categorized collection of **bookmarks** — tutorials, books, docs, videos, and communities
+for OS development, each language, and computer architecture.
+[Browse all 538 links](resources/curated/README.md).
+
 ---
 *Built with MkDocs Material · source: [OSDev-Tutorial-Site](https://github.com/YOUR_USERNAME/OSDev-Tutorial-Site) (private)*
