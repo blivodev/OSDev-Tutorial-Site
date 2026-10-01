@@ -26,17 +26,17 @@ five — each path is self-contained and weaves the shared OS concepts in as you
 These explain *how computers and OSes work* — read them alongside any path (each path tells you
 when). If you want the theory first:
 
-- [How a computer boots](synthesized_tutorials/00-introduction/01-how-a-computer-boots.md)
-- [Bootloaders & the Multiboot protocol](synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md)
-- [Memory management](synthesized_tutorials/concepts/02-memory-management.md)
-- [Interrupts & the IDT](synthesized_tutorials/concepts/03-interrupts-and-the-idt.md)
-- [VGA text mode](synthesized_tutorials/concepts/04-vga-text-mode.md)
-- [The "Hello World of OSes" recipe](synthesized_tutorials/concepts/05-the-hello-world-of-oses.md)
+- [How a computer boots](../synthesized_tutorials/00-introduction/01-how-a-computer-boots.md)
+- [Bootloaders & the Multiboot protocol](../synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md)
+- [Memory management](../synthesized_tutorials/concepts/02-memory-management.md)
+- [Interrupts & the IDT](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md)
+- [VGA text mode](../synthesized_tutorials/concepts/04-vga-text-mode.md)
+- [The "Hello World of OSes" recipe](../synthesized_tutorials/concepts/05-the-hello-world-of-oses.md)
 
 ---
 
 ## 🔍 Tools & reference
 
-- [Glossary (hover-tooltips for every term)](GLOSSARY/README.md)
-- [Example OS project (C, C++, Rust, Go, C#)](Example_OS_Project/README.md)
-- [Resource index & video collection](resources/INDEX/)
+- [Glossary (hover-tooltips for every term)](../GLOSSARY/README.md)
+- [Example OS project (C, C++, Rust, Go, C#)](../Example_OS_Project/README.md)
+- [Resource index & video collection](../resources/INDEX/)
