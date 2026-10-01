@@ -79,3 +79,32 @@ concepts pages (step 3) will carry you from there.
 [Begin](beginner.md) · [Go kernel chapter](../../synthesized_tutorials/04-go/README.md) · [Reference](../../path_go_os/README.md)
 
 </div>
+
+
+---
+
+## 🎬 Watch Go in action
+
+These are real, verified talks from Gopher conferences. Click each to expand and watch inline:
+
+<details class="video-embed"><summary>▶ Watch: GopherCon 2018: The Scheduler Saga (how goroutines map to threads)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/YHRO5WQGh0k" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: GopherCon 2017: Understanding Channels</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/KBZlN0izeiY" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Understanding Allocations: the Stack and the Heap</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/ZMZpH4yT7M0" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+---
+
+## 🔗 Further resources (Go)
+
+- [The Go Tour](https://go.dev/tour/) — the official interactive introduction to Go, from zero.
+- [Go Documentation](https://go.dev/doc/) — effective Go, the language spec, and how to install the toolchain.
+- [The Go Blog](https://go.dev/blog/) — official deep-dives including the scheduler, memory, and concurrency.
+- [OSDev Wiki — Go Bare Bones](https://wiki.osdev.org/Go_Bare_Bones) — the canonical kernel tutorial that this path's reference is based on.
+- [The Go Memory Model](https://go.dev/ref/mem) — the language's formal memory model, relevant to what Go's runtime promises.
+- [Effective Go](https://go.dev/doc/effective_go) — the standard, idiomatic style guide every Go developer should read.
+

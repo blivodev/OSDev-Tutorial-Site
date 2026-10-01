@@ -33,3 +33,36 @@ These are real, reliable C resources that complement the written tutorial:
 | [C Programming Tutorial for Beginners — freeCodeCamp](https://www.youtube.com/watch?v=xND0t1pr3KY) | The classic all-rounder; covers the whole language from zero. |
 
 > 🧭 **New to programming?** Start with the [beginner tutorial](beginner.md) — it assumes you've never written a line of code.
+
+
+---
+
+## 🎬 Watch C in action
+
+These are real, verified videos. Click each to expand and watch inline:
+
+<details class="video-embed"><summary>▶ Watch: CS50x — Memory (pointers, stack & heap)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/F9-yqoS7b8w" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Pointers — CS50 Shorts</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/XISnO2YhnsY" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: C Programming for Beginners (freeCodeCamp)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/xND0t1pr3KY" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Pointers in C/C++ Full Course</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/zuegQmMdy8M" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+---
+
+## 🔗 Further resources (C)
+
+- [C reference — cppreference.com/w/c](https://en.cppreference.com/w/c) — the authoritative reference for every C standard library function and keyword.
+- [The GNU C Programming Tutorial](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html) — the official GNU manual for C.
+- [OSDev Wiki — Bare Bones (C)](https://wiki.osdev.org/Bare_Bones) — the canonical first C kernel tutorial, the same one this path is built around.
+- [OSDev Wiki — Meaty Skeleton](https://wiki.osdev.org/Meaty_Skeleton) — the next step after Bare Bones: a proper kernel project structure.
+- [C — Learn C with interactive lessons](https://learn-c.org/) — a free, hands-on C tutorial for complete beginners.
+- [freeCodeCamp — C Programming course](https://www.youtube.com/watch?v=xND0t1pr3KY) — a full video course taking you through the whole language.
+- [CS50x on edX](https://cs50.harvard.edu/x/) — Harvard's free intro course; Lecture 4 covers the memory model every OS dev needs.
+

@@ -120,3 +120,35 @@ explore the other tracks:
   pointer-level control of bare metal.
 - [**Glossary**](../../GLOSSARY/README.md) — hover-tooltips for every OS
   term you've met along the way.
+
+
+---
+
+## 🎬 Watch C# in action
+
+These are real, verified videos covering C# and the Cosmos OS kit. Click each to expand and watch inline:
+
+<details class="video-embed"><summary>▶ Watch: C# Tutorial — Full Course for Beginners (freeCodeCamp)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/GhQdlIFylQ8" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Garbage Collector in .NET Explained (the managed memory model)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/QvO5Htgb5-Y" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: The Operating System Construction Kit: Cosmos! (Cosmos Quest #1)</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/Khff1xxyEHI" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+<details class="video-embed"><summary>▶ Watch: Make a Simple OS using C# and COSMOS</summary>
+<iframe src="https://www.youtube-nocookie.com/embed/WSsZh3dVtaI" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
+</details>
+
+---
+
+## 🔗 Further resources (C#)
+
+- [Microsoft Learn — C# documentation](https://learn.microsoft.com/en-us/dotnet/csharp/) — the official reference, tutorials, and language spec.
+- [Tour of C#](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/) — a quick guided overview for new C# programmers.
+- [Cosmos OS](https://www.gocosmos.org/) — the C# open-source operating system construction kit this path recommends.
+- [Cosmos on GitHub](https://github.com/CosmosOS/Cosmos) — the source code behind the Cosmos framework.
+- [OSDev Wiki — C Sharp Bare Bones](https://wiki.osdev.org/C_Sharp_Bare_Bones) — the OSDev community tutorial for C# kernels.
+- [The Managed Common Intermediate Language (CIL) spec — ECMA-335](https://www.ecma-international.org/publications-and-standards/standards/ecma-335/) — the standard behind managed IL, the core of the C# edge case.
+
