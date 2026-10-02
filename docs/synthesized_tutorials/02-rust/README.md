@@ -624,6 +624,43 @@ contains the blast radius of any memory bug.
 
 ---
 
+<div class="quiz" data-title="Quick check: Rust for OS dev">
+
+<div class="q" data-type="choice">
+  <p class="question">Which two crate attributes disable the standard library in a kernel?</p>
+  <ul class="options">
+    <li data-correct>no_std and no_main</li>
+    <li>no_std and no_alloc</li>
+    <li>bare_metal and no_std</li>
+    <li>no_main and no_alloc</li>
+  </ul>
+</div>
+
+<div class="q" data-type="choice">
+  <p class="question">What target is used to compile Rust to a bare-metal x86_64 kernel?</p>
+  <ul class="options">
+    <li data-correct>x86_64-unknown-none</li>
+    <li>x86_64-pc-windows-msvc</li>
+    <li>wasm32-unknown-unknown</li>
+    <li>aarch64-unknown-linux-gnu</li>
+  </ul>
+</div>
+
+<div class="q" data-type="tf">
+  <p class="question">True or false: Rust's ownership rules still apply in a no_std kernel and help prevent memory bugs.</p>
+  <ul class="options">
+    <li data-correct>True</li>
+    <li>False</li>
+  </ul>
+</div>
+
+<div class="q" data-type="fill">
+  <p class="question">To halt the CPU in a Rust kernel you usually write an inline ____ instruction using core::arch::asm (the mnemonic that pauses the CPU).</p>
+  <input class="answer" data-answers="hlt, hlt instruction, asm hlt">
+</div>
+
+</div>
+
 ## 🧪 Exercises & Projects
 
 The Rust track got a hello-world kernel past the hard `no_std`/bare-metal ceremony. These exercises lock in the toolchain choices (target, `no_mangle`, lack of libc) and prove you can port concepts independently of habitat. Prereq: the Rust build loop from this README.

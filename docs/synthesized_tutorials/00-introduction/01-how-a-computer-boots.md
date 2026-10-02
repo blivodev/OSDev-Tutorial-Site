@@ -608,6 +608,43 @@ And one more: **the boot chain is a shrinking of responsibility.** Firmware hand
 
 ---
 
+<div class="quiz" data-title="Quick check: the boot chain">
+
+<div class="q" data-type="choice">
+  <p class="question">What is the very first thing that runs when a PC powers on?</p>
+  <ul class="options">
+    <li data-correct>The firmware (BIOS/UEFI) — after the CPU jumps to its reset vector</li>
+    <li>The operating system kernel</li>
+    <li>The bootloader</li>
+    <li>The shell</li>
+  </ul>
+</div>
+
+<div class="q" data-type="choice">
+  <p class="question">Where does a classic BIOS load the boot sector to?</p>
+  <ul class="options">
+    <li data-correct>Physical address 0x7C00 (real mode, 16-bit)</li>
+    <li>0x100000 (1 MiB, protected mode)</li>
+    <li>0x00000000</li>
+    <li>0xFFFF0</li>
+  </ul>
+</div>
+
+<div class="q" data-type="tf">
+  <p class="question">True or false: on x86, the CPU starts in 16-bit real mode before the OS switches it to protected/long mode.</p>
+  <ul class="options">
+    <li data-correct>True</li>
+    <li>False</li>
+  </ul>
+</div>
+
+<div class="q" data-type="fill">
+  <p class="question">In a Multiboot setup, the bootloader loads the kernel to physical address ____ (write the address in hex, e.g. 1MiB).</p>
+  <input class="answer" data-answers="0x100000, 0x00100000, 1MB, 1 MiB">
+</div>
+
+</div>
+
 ## 🧪 Exercises & Projects
 
 Everything a computer does at power-on is one long handoff chain: firmware → bootloader →
