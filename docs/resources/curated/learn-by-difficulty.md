@@ -246,6 +246,76 @@ This page re-presents everything in the hub's curated resource library (tutorial
 
 ---
 
+
+---
+
+## 📚 New library additions by difficulty
+A selection from the recent expansion (1,400+ → 1,900+ books) — pick by your level. Full difficulty-tagged browse lives on the [Browse by Difficulty](/browse/) page.
+
+### 🟢 Beginner (49 books)
+- [AIX RS/6000 : system and administration guide](https://archive.org/details/aixrs6000systema0000dero)
+- [The AIX survival guide](https://archive.org/details/aixsurvivalguide00sieg)
+- [An introduction to personal computers : what you need to know to get up and running](https://archive.org/details/introductiontope0000bela)
+- [PC maintenance : an introduction to upgrade and repair](https://archive.org/details/pcmaintenanceint0000grim)
+- [The PC upgrade guide for everybody](https://archive.org/details/pcupgradeguidefo00gook)
+- [Lab manual for A+ guide to software](https://archive.org/details/labmanualforagui0000andr_f6x0)
+- [A study on the process fundamentals and improvements in wire electrochemical micromachining and its application in large surface area texturing](https://archive.org/details/shg.715933-a-study-on-the-process-fundamentals-and-improvements-in-wire-elec)
+- [The bonehead's guide to amps](https://archive.org/details/boneheadsguideto0000hilt)
+- [User's guide and reference manual for LogicAid ; Getting started with SimUaid](https://archive.org/details/isbn_9780534384746)
+- [Introduction to modeling in wildlife and resource conservation](https://archive.org/details/introductiontomo0000owen)
+- [Introduction to simulation and SLAM II](https://archive.org/details/introductiontosi0000prit)
+- [Applying Pose-Guided Deep Learning for Real--Time Virtual Try-On](https://archive.org/details/applying-pose-guided-deep-learning-for-real-time-virtual-try-on)
+
+*…and 37 more — see the [Browse by Difficulty](/browse/) page for the full list.*
+
+### 🟠 Intermediate (263 books)
+- [Personalizing your PC](https://archive.org/details/personalizingyou0000beat)
+- [Microsoft Works for the PC made easy](https://archive.org/details/microsoftworksfo0000matt)
+- [Computer concepts with microcomputer applications : WordPerfect 5.0/5.1, Lotus 1-2-3 release 2.2, dBASE IV](https://archive.org/details/computerconcepts0000wagg_x3u7)
+- [Upgrading PCs](https://archive.org/details/upgradingpcs0000fark)
+- [How computers work](https://archive.org/details/howcomputerswork00whit)
+- [Microcomputers and their applications for developing countries : report of an ad hoc panel on the use of microcomputers for developing countries](https://archive.org/details/isbn_0813372526)
+- [Collins dictionary of personal computing](https://archive.org/details/collinsdictionar0000sinc_y1n9)
+- [2D artwork and 3D modeling for game artists [electronic resource]](https://archive.org/details/2dartwork3dmodel00davi)
+- [Beat the game](https://archive.org/details/beatgame0000kell)
+- [Basic Mac skills](https://archive.org/details/basicmacskills0000lawt_a5c2)
+- [Journal Of Computer Science IJCSIS December 2015](https://archive.org/details/JournalOfComputerScienceIJCSISDecember2015)
+- [Recognition of two-dimensional shapes.](https://archive.org/details/alfredthayermaha00sandpdf)
+
+*…and 251 more — see the [Browse by Difficulty](/browse/) page for the full list.*
+
+### 🔴 Hard (56 books)
+- [Operating systems](https://archive.org/details/operatingsystems00nutt_0)
+- [Data base management systems: a critical and comparative analysis; a technical report on ADABAS, IMS, system 2000, TOTAL](https://archive.org/details/databasemanageme0000cohe)
+- [Linear Network Theory By G. I. Atabekov 1965](https://archive.org/details/linear-network-theory-by-g.-i.-atabekov-1965)
+- [Protection and health monitoring of IGBT Based PWM Inverter Fed AC Drive Systems](https://archive.org/details/sgng.1481-protection-and-health-monitoring-of-igbt-based-pwm-inverter-fed-ac)
+- [Transactions on computational systems biology XII : special issue on modeling methodologies](https://archive.org/details/transactionsonco0000unse_z1x6)
+- [Modeling and simulation of systems using MATLAB and Simulink](https://archive.org/details/modelingsimulati0000chat)
+- [Transactions on data hiding and multimedia security VII](https://archive.org/details/transactionsonda0000unse_l2b9)
+- [Facing the multicore-- Challenge II : aspects of new paradigms and technologies in parallel computing](https://archive.org/details/facingmulticorec0000unse)
+- [Reliability and Fault Tolerance Issues in Real Time Systems](https://archive.org/details/reliabilityfault00unse)
+- [RFID Based Real Time Smart Waste Management System (2007)](https://archive.org/details/rfid-based-real-time-smart-waste-management-system-2007)
+- [Real Time Traffic Sign Recognition using Convolutional Neural Networks CNNs in ADAS](https://archive.org/details/httpswww.ijtsrd.comengineeringautomotive-engineering80051realtime-traffic-sign-r)
+- [10th Euromicro workshop on real-time systems](https://archive.org/details/isbn_0818685034)
+
+*…and 44 more — see the [Browse by Difficulty](/browse/) page for the full list.*
+
+### ⚫ Advanced (58 books)
+- [Euro-Par 2011 Parallel Processing 17th International Conference, Euro-Par 2011, Bordeaux, France, August 29 - September 2, 2011, Proceedings, Part I](https://archive.org/details/europar2011paral0000jean)
+- [The use of microcomputers to improve Army ground vehicle readiness : a report prepared for Defense Advanced Research Projects Agency](https://archive.org/details/useofmicrocomput0000salt)
+- [Design and application of a differential photo amplifier](https://archive.org/details/designapplicatio272whit)
+- [Low-noise amplifier design with Peltier cooled HEMTs](https://archive.org/details/0162026706190)
+- [Digital principles and design](https://archive.org/details/digitalprinciple0000givo)
+- [An artificial intelligence approach to VLSI design](https://archive.org/details/artificialintell0000kowa)
+- [Design of a simplified reversible decimal adder in quantum computing based on excess-3 code](https://archive.org/details/httpsdiscoveryjournals.orgdiscoverycurrent_issuev54n270a3.pdfzoom125)
+- [NOR (NAND) network design : error-compensation procedures for fan-in and fan-out restricted networks (NETTRA-E1-FIFO and NETTRA-E2-FIFO](https://archive.org/details/nornandnetworkde847huja)
+- [Experiments in logic and computer design](https://archive.org/details/experimentsinlog0000teng)
+- [Contemporary computing : 5th International Conference, IC3 2012, Noida, India, August 6-8, 2012. Proceedings](https://archive.org/details/contemporarycomp0000ic32)
+- [NETWORKING 2012 workshops : International IFIP TC 6 Workshops, ETICS, HetsNets, and CompNets, held at NETWORKING 2012, Prague, Czech Republic, May 25, 2012. Proceedings](https://archive.org/details/networking2012wo0000inte)
+- [Advances in information and computer security : 6th international workshop, IWSEC 2011, Tokyo, Japan, November 8-10, 2011 : proceedings](https://archive.org/details/advancesininform0000inte_d4a5)
+
+*…and 46 more — see the [Browse by Difficulty](/browse/) page for the full list.*
+
 ## Beyond the ladder — where to keep going next
 
 Once you can place yourself on this ladder, the trick is not running out of material but knowing **what the next level actually requires**. Each tier above links forward to the next. When you finish a tier, re-read the "How to use this ladder" note, pick the next lane, and move up one rung — the hub's other curated pages (os-development.md, videos.md, language-*.md, computer-architecture.md) carry the full, un-tiered versions of all these resources plus the deep-dive links referenced above.

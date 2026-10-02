@@ -11,23 +11,23 @@ is free, public, and verified. Use it like a bookmark bar — pick a category, d
 
 ## 📚 Quick index
 
-| Category | What's inside | File |
-|----------|---------------|------|
-| 🖥️ **OS Development** | Tutorials, books, wikis, full OS-from-scratch series | [os-development.md](os-development.md) |
-| 🖥️ **By language — C** | Learn C + OS dev in C | [language-c.md](language-c.md) |
-| 🖥️ **By language — C++** | Modern C++ + low-level & OS dev | [language-cpp.md](language-cpp.md) |
-| 🦀 **By language — Rust** | Rust book + no_std + OS in Rust | [language-rust.md](language-rust.md) |
-| 🐹 **By language — Go** | Go + systems + unikernels | [language-go.md](language-go.md) |
-| 🎯 **By language — C#** | C# + .NET internals + Cosmos | [language-csharp.md](language-csharp.md) |
-| ⚙️ **Computer Architecture** | CPU, assembly, memory, hardware manuals, courses | [computer-architecture.md](computer-architecture.md) |
-| 🧩 **Systems Programming** | Linkers, ELF, concurrency, debuggers, virtual memory | [systems-programming.md](systems-programming.md) |
-| 🦿 **RISC-V** | ISA spec, bare-metal OS-dev, QEMU, boards, toolchains | [riscv.md](riscv.md) |
-| 🧭 **Other Architectures** | AVR (Arduino), Xtensa (ESP32), ARM, MIPS, OpenRISC | [architectures.md](architectures.md) |
-| 🛠️ **Tooling & Toolchains** | Build systems, linkers, debuggers, emulators, CI | [tooling.md](tooling.md) |
-| 🏗️ **Practice & Projects** | Hands-on builds, CTF, "build your own" repos | [practice.md](practice.md) |
-| 📈 **Learn by Difficulty** | Beginner → Very Hard ladder for all tutorials/books/videos | [learn-by-difficulty.md](learn-by-difficulty.md) |
-| 🎬 **Videos** | YouTube channels, series & playlists (OS dev + languages + architecture) | [videos.md](videos.md) |
-| 💬 **Communities** | Forums, Discord, subreddits, mail lists, IRC | [communities.md](communities.md) |
+| Category | What's inside | Difficulty | File |
+|----------|---------------|-----------|------|
+| 🖥️ **OS Development** | Tutorials, books, wikis, full OS-from-scratch series | 🟢 Beginner → 🔴 Hard | [os-development.md](os-development.md) |
+| 🖥️ **By language — C** | Learn C + OS dev in C | 🟢 Beginner → 🟠 Intermediate | [language-c.md](language-c.md) |
+| 🖥️ **By language — C++** | Modern C++ + low-level & OS dev | 🟠 Intermediate → 🔴 Hard | [language-cpp.md](language-cpp.md) |
+| 🦀 **By language — Rust** | Rust book + no_std + OS in Rust | 🟠 Intermediate → 🔴 Hard | [language-rust.md](language-rust.md) |
+| 🐹 **By language — Go** | Go + systems + unikernels | 🟢 Beginner → 🟠 Intermediate | [language-go.md](language-go.md) |
+| 🎯 **By language — C#** | C# + .NET internals + Cosmos | 🟠 Intermediate → 🔴 Hard | [language-csharp.md](language-csharp.md) |
+| ⚙️ **Computer Architecture** | CPU, assembly, memory, hardware manuals, courses | 🟠 Intermediate → 🔴 Hard | [computer-architecture.md](computer-architecture.md) |
+| 🧩 **Systems Programming** | Linkers, ELF, concurrency, debuggers, virtual memory | 🟠 Intermediate → ⚫ Very Hard | [systems-programming.md](systems-programming.md) |
+| 🦿 **RISC-V** | ISA spec, bare-metal OS-dev, QEMU, boards, toolchains | 🟠 Intermediate → 🔴 Hard | [riscv.md](riscv.md) |
+| 🧭 **Other Architectures** | AVR (Arduino), Xtensa (ESP32), ARM, MIPS, OpenRISC | 🟢 Beginner → 🟠 Intermediate | [architectures.md](architectures.md) |
+| 🛠️ **Tooling & Toolchains** | Build systems, linkers, debuggers, emulators, CI | 🟢 Beginner → 🟠 Intermediate | [tooling.md](tooling.md) |
+| 🏗️ **Practice & Projects** | Hands-on builds, CTF, "build your own" repos | 🟢 Beginner → ⚫ Very Hard | [practice.md](practice.md) |
+| 📈 **Learn by Difficulty** | Beginner → Very Hard ladder for all tutorials/books/videos | 🟢 Beginner → ⚫ Very Hard | [learn-by-difficulty.md](learn-by-difficulty.md) |
+| 🎬 **Videos** | YouTube channels, series & playlists (OS dev + languages + architecture) | 🟢 Beginner → 🔴 Hard | [videos.md](videos.md) |
+| 💬 **Communities** | Forums, Discord, subreddits, mail lists, IRC | — | [communities.md](communities.md) |
 
 ---
 
