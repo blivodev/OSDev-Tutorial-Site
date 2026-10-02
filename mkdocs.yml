@@ -38,11 +38,13 @@ theme:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/quizzes.css
+  - stylesheets/progress.css
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
   - javascripts/extra.js
   - javascripts/quizzes.js
+  - javascripts/progress.js
 
 markdown_extensions:
   - tables
@@ -119,6 +121,10 @@ nav:
       - "C# project": Example_OS_Project/csharp/README.md
   - Glossary: GLOSSARY/README.md
   - "Video Library": videos/index.md
+  - "News": /news/
+  - Flashcards: flashcards/index.html
+  - "Interactive Diagrams": interactive/index.md
+  - "Live Playground": playground/index.md
   - Resources:
       - "Curated Library (bookmarks)": resources/curated/README.md
       - OS Development: resources/curated/os-development.md
