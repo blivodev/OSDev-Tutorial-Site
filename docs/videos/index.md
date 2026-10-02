@@ -570,6 +570,247 @@ End-to-end series that take you from an empty boot sector to a working operating
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XHH4VnHbsVc" title="Reading the Spec & Hello World | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Reading the Spec & Hello World | UEFI Dev (in C)** · where a UEFI OS journey begins — reading the spec and printing hello world from firmware
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mHh2-ixF9Yk" title="Get Memory Map & Exit Boot Services | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Get Memory Map & Exit Boot Services | UEFI Dev (in C)** · obtain the memory map and leave the boot services behind
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UcL-c_XYE2E" title="Setup x86_64 Paging to Remap Kernel (1/2) | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Setup x86_64 Paging to Remap Kernel (1/2) | UEFI Dev (in C)** · set up x86_64 paging to remap the kernel (1/2)
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KlykwpJTDy4" title="x86_64 GDT for Remapped Kernel (2/2) | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**x86_64 GDT for Remapped Kernel (2/2) | UEFI Dev (in C)** · the x86_64 GDT for a remapped kernel (2/2)
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YImMImjGbhw" title="Mouse Cursor & Simple Pointer Protocol | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Mouse Cursor & Simple Pointer Protocol | UEFI Dev (in C)** · a mouse cursor with the UEFI Simple Pointer Protocol
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HzoX3Fr7a5E" title="Loading/Running Programs | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Loading/Running Programs | UEFI Dev (in C)** · loading and running programs under UEFI
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/18ItGlUfi24" title="Load File from Disk Blocks & Other Abstractions | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Load File from Disk Blocks & Other Abstractions | UEFI Dev (in C)** · reading file blocks and building disk abstractions
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QIGun_BGuDw" title="Virtual Memory & Paging | 32 bit OS Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Virtual Memory & Paging | 32 bit OS Dev (in C)** · virtual memory and paging in a 32-bit OS
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/R4SGAA3A2RY" title="Keyboard IRQ1 & PC Speaker Music | Amateur OS Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Keyboard IRQ1 & PC Speaker Music | Amateur OS Dev (in C)** · keyboard IRQ1 and PC speaker music
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZWhmlZdpWg0" title="Timer IRQ0 & Real Time Clock IRQ8 | Amateur OS Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Timer IRQ0 & Real Time Clock IRQ8 | Amateur OS Dev (in C)** · timer IRQ0 and Real Time Clock IRQ8
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NqSE_aVCJXg" title="Setting Up Interrupts - Amateur OS Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Setting Up Interrupts - Amateur OS Dev (in C)** · setting up interrupts for an amateur OS
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SQBBetLJA9w" title="Write your own Operating System 8: Abstractions for Drivers" frameborder="0" allowfullscreen></iframe>
+
+**Write your own Operating System 8: Abstractions for Drivers** · clean driver abstractions for your own OS
+
+- Channel: [@writeyourownoperatingsystem](https://www.youtube.com/@writeyourownoperatingsystem)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BeSpPd3C3J8" title="Write your own Operating System 16: Dynamic Memory Management / Heap" frameborder="0" allowfullscreen></iframe>
+
+**Write your own Operating System 16: Dynamic Memory Management / Heap** · dynamic memory management and the heap
+
+- Channel: [@writeyourownoperatingsystem](https://www.youtube.com/@writeyourownoperatingsystem)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uS02rOvLgak" title="Write your own Operating System 19: Hard Drives" frameborder="0" allowfullscreen></iframe>
+
+**Write your own Operating System 19: Hard Drives** · hard drive support
+
+- Channel: [@writeyourownoperatingsystem](https://www.youtube.com/@writeyourownoperatingsystem)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g5Ej3RxIZJI" title="Write your own Operating System 20: System calls, POSIX compliance" frameborder="0" allowfullscreen></iframe>
+
+**Write your own Operating System 20: System calls, POSIX compliance** · system calls and POSIX compliance
+
+- Channel: [@writeyourownoperatingsystem](https://www.youtube.com/@writeyourownoperatingsystem)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tEYgVwN1nRk" title="Write your own Operating System B02: File Allocation Table (FAT32)" frameborder="0" allowfullscreen></iframe>
+
+**Write your own Operating System B02: File Allocation Table (FAT32)** · a FAT32 file allocation table from first principles
+
+- Channel: [@writeyourownoperatingsystem](https://www.youtube.com/@writeyourownoperatingsystem)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/z8bQYfs9TJ4" title="05 Phase 2 bootloader -Your own OS kernel" frameborder="0" allowfullscreen></iframe>
+
+**05 Phase 2 bootloader -Your own OS kernel** · phase 2 bootloader for your own OS kernel
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Eo6bB5CwLCY" title="02 Designing kernel memory management -Your own OS kernel" frameborder="0" allowfullscreen></iframe>
+
+**02 Designing kernel memory management -Your own OS kernel** · designing kernel memory management
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lTgjMZwSfF4" title="#OSdev 06 Lowlevel filesystem folders" frameborder="0" allowfullscreen></iframe>
+
+**#OSdev 06 Lowlevel filesystem folders** · low-level filesystem folders
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZJw3YAWfk5g" title="#OSdev 05 Coding files at the OS level" frameborder="0" allowfullscreen></iframe>
+
+**#OSdev 05 Coding files at the OS level** · coding files at the OS level
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g8f67TU2ybs" title="Coding a small Operating System in JS" frameborder="0" allowfullscreen></iframe>
+
+**Coding a small Operating System in JS** · a small operating system written in JavaScript
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/J1lMQKTwEX0" title="Coding a memory allocator free() function in C" frameborder="0" allowfullscreen></iframe>
+
+**Coding a memory allocator free() function in C** · writing a memory allocator free() in C
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oFM6RWB1170" title="Project: Code your own Memory Allocator from scratch in C" frameborder="0" allowfullscreen></iframe>
+
+**Project: Code your own Memory Allocator from scratch in C** · a memory allocator from scratch in C
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0OcmaLP-tT8" title="Coding Virtual Memory in C" frameborder="0" allowfullscreen></iframe>
+
+**Coding Virtual Memory in C** · virtual memory implemented in C
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vaz26RYhmME" title="Coding a Linux kernel module in C" frameborder="0" allowfullscreen></iframe>
+
+**Coding a Linux kernel module in C** · coding a Linux kernel module in C
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ukIajayMv5U" title="Project: Coding a GRUB bootloader for booting Linux" frameborder="0" allowfullscreen></iframe>
+
+**Project: Coding a GRUB bootloader for booting Linux** · a GRUB bootloader for booting Linux
+
+- Channel: [@dr-Jonas-Birch](https://www.youtube.com/@dr-Jonas-Birch)
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/P5CAbrgezTQ" title="Printing Configuration Tables & ACPI Table Signatures | UEFI Dev (in C)" frameborder="0" allowfullscreen></iframe>
+
+**Printing Configuration Tables & ACPI Table Signatures | UEFI Dev (in C)** · printing configuration tables and ACPI table signatures under UEFI
+
+- Channel: [@QuesoFuego](https://www.youtube.com/@QuesoFuego)
+
+---
+
 ## 🦀 Rust OS Playlists
 
 Follow-along video companions for writing an OS in Rust, including the `os.phil-opp.com` blog series.
@@ -882,6 +1123,140 @@ Channels and playlists that demystify what actually happens between your source 
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/cfNJ85cX-ms" title="Worlds Simplest Bootloader :: Bare Metal Programming Series 4" frameborder="0" allowfullscreen></iframe>
+
+**Worlds Simplest Bootloader :: Bare Metal Programming Series 4** · the world's simplest bootloader — bare metal series 4
+
+- Channel: [@LowByteProductions](https://www.youtube.com/@LowByteProductions)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qSUbe_a54gY" title="UART Driver From Scratch :: Bare Metal Programming Series 5" frameborder="0" allowfullscreen></iframe>
+
+**UART Driver From Scratch :: Bare Metal Programming Series 5** · a UART driver from scratch — bare metal series 5
+
+- Channel: [@LowByteProductions](https://www.youtube.com/@LowByteProductions)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S92ltJ0C59k" title="Interrupts and Memory Mapped I/O :: Bare Metal Programming Series 2" frameborder="0" allowfullscreen></iframe>
+
+**Interrupts and Memory Mapped I/O :: Bare Metal Programming Series 2** · interrupts and memory-mapped I/O — bare metal series 2
+
+- Channel: [@LowByteProductions](https://www.youtube.com/@LowByteProductions)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hLYGTpvoMgE" title="What is Memory Mapped I/O? (16-Bit VM in JavaScript 005)" frameborder="0" allowfullscreen></iframe>
+
+**What is Memory Mapped I/O? (16-Bit VM in JavaScript 005)** · what is memory-mapped I/O? — 16-bit VM in JS 005
+
+- Channel: [@LowByteProductions](https://www.youtube.com/@LowByteProductions)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QmHAN1vOtjs" title="The Emulator Is Done?!: RISC-V ep.12" frameborder="0" allowfullscreen></iframe>
+
+**The Emulator Is Done?!: RISC-V ep.12** · a hardware RISC-V CPU emulator, completed — RISC-V ep.12
+
+- Channel: [@LowByteProductions](https://www.youtube.com/@LowByteProductions)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eF9qWbuQLuw" title="Parser and Lexer — How to Create a Compiler part 1/5 — Converting text into an Abstract Syntax Tree" frameborder="0" allowfullscreen></iframe>
+
+**Parser and Lexer — How to Create a Compiler part 1/5 — Converting text into an Abstract Syntax Tree** · parser and lexer — How to Create a Compiler part 1/5
+
+- Channel: [@bisqwit](https://www.youtube.com/@bisqwit)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QSPaL4aVjRo" title="Optimizing Trees — How to Create a Compiler part 2/5 — Simple optimizations to a program in an AST" frameborder="0" allowfullscreen></iframe>
+
+**Optimizing Trees — How to Create a Compiler part 2/5 — Simple optimizations to a program in an AST** · optimizing trees — How to Create a Compiler part 2/5
+
+- Channel: [@bisqwit](https://www.youtube.com/@bisqwit)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fDKfdyDWdE4" title="Three-Address Code — How to Create a Compiler part 3/5 — Converting AST into statement-based IR" frameborder="0" allowfullscreen></iframe>
+
+**Three-Address Code — How to Create a Compiler part 3/5 — Converting AST into statement-based IR** · three-address code — How to Create a Compiler part 3/5
+
+- Channel: [@bisqwit](https://www.youtube.com/@bisqwit)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g9_FYRAfyqQ" title="x86 mov insns & short history of the most popular CPU architecture" frameborder="0" allowfullscreen></iframe>
+
+**x86 mov insns & short history of the most popular CPU architecture** · x86 mov instructions and the history of the most popular CPU architecture
+
+- Channel: [@bisqwit](https://www.youtube.com/@bisqwit)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/t9l058vrURo" title="Bisqwit analyses TempleOS & its sole author, Terry A. Davis" frameborder="0" allowfullscreen></iframe>
+
+**Bisqwit analyses TempleOS & its sole author, Terry A. Davis** · TempleOS and its sole author, Terry A. Davis
+
+- Channel: [@bisqwit](https://www.youtube.com/@bisqwit)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XuOVcKPVZx4" title="this bug is lower than your operating system" frameborder="0" allowfullscreen></iframe>
+
+**this bug is lower than your operating system** · a bug living below your operating system
+
+- Channel: [@LowLevelTV](https://www.youtube.com/@LowLevelTV)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BxdWlV5LI_4" title="The Linux Kernel is Falling Apart." frameborder="0" allowfullscreen></iframe>
+
+**The Linux Kernel is Falling Apart.** · a frank look at the Linux kernel's maintainability crisis
+
+- Channel: [@LowLevelTV](https://www.youtube.com/@LowLevelTV)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CulF4YQt6zA" title="i wrote my own memory allocator in C to prove a point" frameborder="0" allowfullscreen></iframe>
+
+**i wrote my own memory allocator in C to prove a point** · writing a memory allocator in C to prove a point
+
+- Channel: [@LowLevelTV](https://www.youtube.com/@LowLevelTV)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/t7CUti_7d7c" title="why do void* pointers even exist?" frameborder="0" allowfullscreen></iframe>
+
+**why do void* pointers even exist?** · why void* pointers exist
+
+- Channel: [@LowLevelTV](https://www.youtube.com/@LowLevelTV)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vhyettT7sdA" title="you can learn assembly FAST with this technique (arm64 breakdown)" frameborder="0" allowfullscreen></iframe>
+
+**you can learn assembly FAST with this technique (arm64 breakdown)** · learning assembly fast with an ARM64 breakdown
+
+- Channel: [@LowLevelTV](https://www.youtube.com/@LowLevelTV)
+
+---
+
 ## 🏗️ Computer Architecture
 
 Understand the machine your kernel runs on — CPUs, buses, memory, and caches.
@@ -1046,6 +1421,140 @@ Understand the machine your kernel runs on — CPUs, buses, memory, and caches.
 
 ---
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kRlSFm519Bo" title="Astable 555 timer - 8-bit computer clock - part 1" frameborder="0" allowfullscreen></iframe>
+
+**Astable 555 timer - 8-bit computer clock - part 1** · the astable 555 timer — 8-bit clock part 1
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SmQ5K7UQPMM" title="Clock logic - 8-bit computer clock - part 4" frameborder="0" allowfullscreen></iframe>
+
+**Clock logic - 8-bit computer clock - part 4** · clock logic — 8-bit computer clock part 4
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/a73ZXDJtU48" title="Programming Fibonacci on a breadboard computer" frameborder="0" allowfullscreen></iframe>
+
+**Programming Fibonacci on a breadboard computer** · programming Fibonacci on a breadboard computer
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9PPrrSyubG0" title="Programming my 8-bit breadboard computer" frameborder="0" allowfullscreen></iframe>
+
+**Programming my 8-bit breadboard computer** · programming the 8-bit breadboard computer
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AqNDk_UJW4k" title="Making a computer Turing complete" frameborder="0" allowfullscreen></iframe>
+
+**Making a computer Turing complete** · making a computer Turing complete
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/i_wrxBdXTgM" title="RAM and bus timing — 6502 part 6" frameborder="0" allowfullscreen></iframe>
+
+**RAM and bus timing — 6502 part 6** · RAM and bus timing — 6502 part 6
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/omI0MrTWiMU" title="Subroutine calls, now with RAM — 6502 part 7" frameborder="0" allowfullscreen></iframe>
+
+**Subroutine calls, now with RAM — 6502 part 7** · subroutine calls with RAM — 6502 part 7
+
+- Channel: [@BenEater](https://www.youtube.com/@BenEater)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8VsiYWW9r48" title="Machine Code Explained - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**Machine Code Explained - Computerphile** · what machine code actually looks like
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SAk-6gVkio0" title="How CPU Memory & Caches Work - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**How CPU Memory & Caches Work - Computerphile** · how CPU memory and caches work
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BVNx3wtJ9vs" title="CPU Pipeline - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**CPU Pipeline - Computerphile** · the CPU pipeline
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nhXevKMm3JI" title="How CPUs Do Math(s) - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**How CPUs Do Math(s) - Computerphile** · how CPUs do math
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nczJ58WvtYo" title="How Branch Prediction Works in CPUs - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**How Branch Prediction Works in CPUs - Computerphile** · how branch prediction works in CPUs
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jNC9LPc3BI0" title="How CPUs do Out Of Order Operations - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**How CPUs do Out Of Order Operations - Computerphile** · how CPUs do out-of-order operations
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/di5WodGWTiY" title="Memory Mapping - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**Memory Mapping - Computerphile** · memory mapping
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5lFnKYCZT5o" title="What's Virtual Memory? - Computerphile" frameborder="0" allowfullscreen></iframe>
+
+**What's Virtual Memory? - Computerphile** · what virtual memory is
+
+- Channel: [@Computerphile](https://www.youtube.com/@Computerphile)
+
+---
+
 ## 🧠 Short Explainers: Kernels, Booting & How Computers Really Work
 
 Bite-sized, high-signal explainers on the core ideas behind OS development.
@@ -1199,6 +1708,120 @@ Bite-sized, high-signal explainers on the core ideas behind OS development.
 **Fireship: TempleOS in 100 Seconds**
 
 - Channel: [@Fireship](https://www.youtube.com/@Fireship)
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WtlGB-YVLOg" title="What Happens When a CPU Receives an Unknown Instruction?" frameborder="0" allowfullscreen></iframe>
+
+**What Happens When a CPU Receives an Unknown Instruction?** · what happens when a CPU receives an unknown instruction
+
+- Channel: [@CoreDumpped](https://www.youtube.com/@CoreDumpped)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IMceN4_rieo" title="How Hardware Makes Threads Less of a Nightmare" frameborder="0" allowfullscreen></iframe>
+
+**How Hardware Makes Threads Less of a Nightmare** · how hardware makes threads less of a nightmare
+
+- Channel: [@CoreDumpped](https://www.youtube.com/@CoreDumpped)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SwIPOf2YAgI" title="The Weird Way Linux Creates Processes" frameborder="0" allowfullscreen></iframe>
+
+**The Weird Way Linux Creates Processes** · the weird way Linux creates processes
+
+- Channel: [@CoreDumpped](https://www.youtube.com/@CoreDumpped)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Cc33wOBAKDM" title="Bit Shifting: The Hidden Trick Inside Your CPU" frameborder="0" allowfullscreen></iframe>
+
+**Bit Shifting: The Hidden Trick Inside Your CPU** · bit shifting — the hidden trick inside your CPU
+
+- Channel: [@CoreDumpped](https://www.youtube.com/@CoreDumpped)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tadUeiNe5-g" title="How CPUs Interact with So Many Different Devices" frameborder="0" allowfullscreen></iframe>
+
+**How CPUs Interact with So Many Different Devices** · how CPUs interact with so many different devices
+
+- Channel: [@CoreDumpped](https://www.youtube.com/@CoreDumpped)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JEPf2JZzVzk" title="A Raspberry Pi Console Without Linux" frameborder="0" allowfullscreen></iframe>
+
+**A Raspberry Pi Console Without Linux** · a Raspberry Pi console without Linux
+
+- Channel: [@InkboxSoftware](https://www.youtube.com/@InkboxSoftware)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/A2i5OyUuDgs" title="Behind the Curtain: NESOS" frameborder="0" allowfullscreen></iframe>
+
+**Behind the Curtain: NESOS** · behind the curtain of NESOS
+
+- Channel: [@InkboxSoftware](https://www.youtube.com/@InkboxSoftware)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dIjQjbp4MSc" title="Building a Smartwatch From Scratch (Including the OS)" frameborder="0" allowfullscreen></iframe>
+
+**Building a Smartwatch From Scratch (Including the OS)** · building a smartwatch from scratch, including the OS
+
+- Channel: [@InkboxSoftware](https://www.youtube.com/@InkboxSoftware)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5_UCkcb7iGY" title="What is the Smallest Possible .EXE?" frameborder="0" allowfullscreen></iframe>
+
+**What is the Smallest Possible .EXE?** · the smallest possible .EXE
+
+- Channel: [@InkboxSoftware](https://www.youtube.com/@InkboxSoftware)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZFHnbozz7b4" title="Programming in Assembly without an Operating System" frameborder="0" allowfullscreen></iframe>
+
+**Programming in Assembly without an Operating System** · programming in assembly without an operating system
+
+- Channel: [@InkboxSoftware](https://www.youtube.com/@InkboxSoftware)
+
+---
+
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/X1TSNTVwo9E" title="2000 days of SerenityOS (Git history visualized)" frameborder="0" allowfullscreen></iframe>
+
+**2000 days of SerenityOS (Git history visualized)** · 2000 days of SerenityOS in a git history visualization
+
+- Channel: [@awesomekling](https://www.youtube.com/@awesomekling)
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eNtADpJ2EC4" title="The Most Ambiguous Concept in Computer Science" frameborder="0" allowfullscreen></iframe>
+
+**The Most Ambiguous Concept in Computer Science** · the most ambiguous concept in computer science
+
+- Channel: [@CoreDumpped](https://www.youtube.com/@CoreDumpped)
+
+---
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hqDGWfZhitc" title="NES Memory Visualization: Mega Man 2" frameborder="0" allowfullscreen></iframe>
+
+**NES Memory Visualization: Mega Man 2** · visualizing NES memory with Mega Man 2
+
+- Channel: [@bisqwit](https://www.youtube.com/@bisqwit)
 
 ---
 
