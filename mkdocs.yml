@@ -123,6 +123,7 @@ nav:
   - "Video Library": videos/index.md
   - "News": /news/
   - Flashcards: flashcards/index.html
+  - "Browse by Difficulty": browse/index.html
   - "Interactive Diagrams": interactive/index.md
   - "Live Playground": playground/index.md
   - Resources:
