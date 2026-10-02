@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Interactive: The Boot Chain — OSDev · sektor9.dev</title>
+<style>
+:root{--fg:#e2e8f0;--muted:#94a3b8;--accent:#6366f1;--card:#1e293b;--bg:#0b1220;--good:#34d399;--warn:#fbbf24}
+*{box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:0}
+.wrap{max-width:720px;margin:0 auto;padding:40px 20px}
+h1{font-size:1.7rem;color:#fff;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 26px;font-size:.92rem}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+button{font:inherit;padding:9px 16px;border-radius:10px;border:1px solid #334155;background:#1e293b;color:#e2e8f0;cursor:pointer}
+button:hover{background:#273449}
+button.primary{background:var(--accent);border-color:var(--accent)}
+.chain{display:flex;flex-direction:column;gap:10px}
+.stage{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid #334155;border-left:5px solid var(--accent);border-radius:12px;padding:14px 16px;opacity:.35;transition:opacity .4s,transform .3s}
+.stage.active{opacity:1;transform:translateX(6px)}
+.stage .n{flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem}
+.stage.done .n{background:var(--good)}
+.stage .label{font-weight:700;font-size:1rem}
+.stage .desc{color:var(--muted);font-size:.84rem;margin-top:2px}
+.arrow{align-self:flex-start;margin-left:44px;color:var(--muted);font-size:.9rem}
+.status{margin-top:22px;padding:14px 16px;border-radius:12px;background:#111827;border:1px solid #334155;min-height:60px;font-size:.95rem;line-height:1.5}
+.status b{color:var(--accent)}
+.timeline{display:flex;gap:6px;margin-top:14px}
+.timeline span{flex:1;height:6px;border-radius:3px;background:#334155}
+.timeline span.on{background:var(--good)}
+</style></head><body><div class="wrap">
+<h1>🎬 Interactive: The x86 Boot Chain</h1>
+<p class="sub">Step through power-on to your kernel — click to advance, or press Play. This is the relay-race from the <em>How a computer boots</em> chapter.</p>
+<div class="controls">
+  <button class="primary" id="play">▶ Play</button>
+  <button id="next">Step ▶|</button>
+  <button id="reset">↺ Reset</button>
+</div>
+<div class="chain" id="chain"></div>
+<div class="status" id="status"></div>
+<div class="timeline" id="timeline"></div>
+<p style="margin-top:26px;color:var(--muted);font-size:.82rem"><a href="/" style="color:var(--accent)">← Back to OSDev hub</a> · concept from <em>01-how-a-computer-boots.md</em></p>
+</div>
+<script>
+const STAGES=[
+ {label:'Power on',desc:'CPU resets to its reset vector; firmware (BIOS/UEFI) takes over.',detail:'The CPU starts in 16-bit real mode and jumps to a fixed address (0xFFFF0 on classic BIOS) where the firmware lives.'},
+ {label:'POST + device scan',desc:'Firmware runs Power-On Self-Test and probes devices (RAM, disks, keyboard).',detail:'POST checks basic hardware, then firmware scans for a bootable disk by looking for the boot signature 0x55AA at the end of a 512-byte sector.'},
+ {label:'Firmware finds bootloader',desc:'It locates a bootable device and loads the boot sector (the bootloader start).',detail:'The 512-byte boot sector is loaded to physical address 0x7C00 and jumped to. This is where YOUR bootloader (GRUB/Limine/bootloader crate) begins.'},
+ {label:'Bootloader loads kernel',desc:'GRUB/Limine reads the kernel image, validates the Multiboot header, loads it at 1 MiB.',detail:'The bootloader scans for the Multiboot magic (0x1BADB002), checks flags+checksum, then loads your kernel at 0x100000 (1 MiB). It also switches CPU to protected/long mode and sets up a basic GDT.'},
+ {label:'Jump to _start',desc:'The bootloader jumps to your kernel entry point. Now YOUR code runs.',detail:'The handoff: everything before this jump is the bootloader\'s job; from here the kernel owns the machine — no libc, no malloc, no OS underneath.'},
+ {label:'Kernel runs',desc:'Your kernel writes to VGA (0xB8000), sets up GDT/IDT, and manages memory.',detail:'First steps: write a character to video memory to prove you\'re alive, set up interrupt handling, then build memory management. The 1 MiB load base is where it all starts.'},
+];
+let cur=-1, timer=null;
+const chain=document.getElementById('chain');
+STAGES.forEach((s,i)=>{
+  const d=document.createElement('div');
+  d.className='stage'; d.id='s'+i;
+  d.innerHTML='<div class="n">'+(i+1)+'</div><div><div class="label">'+s.label+'</div><div class="desc">'+s.desc+'</div></div>';
+  chain.appendChild(d);
+  if(i<STAGES.length-1){const a=document.createElement('div');a.className='arrow';a.textContent='↓';chain.appendChild(a);}
+});
+function render(){
+  document.querySelectorAll('.stage').forEach((el,i)=>{
+    el.classList.toggle('active', i===cur);
+    el.classList.toggle('done', i<cur);
+  });
+  document.getElementById('timeline').innerHTML=STAGES.map((_,i)=>'<span class="'+(i<=cur?'on':'')+'"></span>').join('');
+  const st=document.getElementById('status');
+  if(cur<0) st.innerHTML='<b>Ready.</b> Press <b>Play</b> or <b>Step</b> to walk the boot chain from power-on to your kernel.';
+  else st.innerHTML='<b>'+STAGES[cur].label+':</b> '+STAGES[cur].detail;
+}
+document.getElementById('next').onclick=()=>{cur=Math.min(STAGES.length-1,cur+1);render();};
+document.getElementById('reset').onclick=()=>{clearInterval(timer);cur=-1;render();};
+document.getElementById('play').onclick=()=>{
+  clearInterval(timer); cur=-1; render();
+  timer=setInterval(()=>{
+    if(cur>=STAGES.length-1){clearInterval(timer);return;}
+    cur++; render();
+  },1500);
+};
+render();
+</script></body></html>
