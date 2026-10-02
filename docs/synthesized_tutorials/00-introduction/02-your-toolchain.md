@@ -620,6 +620,43 @@ Keep this beside you, memorize the *why* behind each flag, and the toolchain sto
 
 ---
 
+<div class="quiz" data-title="Quick check: your toolchain">
+
+<div class="q" data-type="choice">
+  <p class="question">Which toolchain component turns assembly into machine code?</p>
+  <ul class="options">
+    <li data-correct>The assembler (e.g. NASM)</li>
+    <li>The linker</li>
+    <li>The compiler</li>
+    <li>The loader</li>
+  </ul>
+</div>
+
+<div class="q" data-type="choice">
+  <p class="question">What does the linker do that the compiler does not?</p>
+  <ul class="options">
+    <li data-correct>Resolves symbol references and produces the final binary layout</li>
+    <li>Optimizes the source code</li>
+    <li>Checks the syntax of the code</li>
+    <li>Runs the program</li>
+  </ul>
+</div>
+
+<div class="q" data-type="tf">
+  <p class="question">True or false: an object file (.o) is fully linked and ready to run on its own.</p>
+  <ul class="options">
+    <li>True</li>
+    <li data-correct>False</li>
+  </ul>
+</div>
+
+<div class="q" data-type="fill">
+  <p class="question">The tool that runs and tests your kernel in a virtual machine on your host is called ____ (the popular one ships as qemu-system-x86_64).</p>
+  <input class="answer" data-answers="qemu, qemu system x86 64, qemu-system-x86_64, emulator">
+</div>
+
+</div>
+
 ## 🧪 Exercises & Projects
 
 The toolchain is four pillars — cross-compiler, assembler, linker, and a harness

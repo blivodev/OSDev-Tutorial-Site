@@ -606,6 +606,43 @@ general memory videos in the mix. All are real and verified on YouTube.
 
 ---
 
+<div class="quiz" data-title="Quick check: C++ for OS dev">
+
+<div class="q" data-type="choice">
+  <p class="question">What does the extern "C" linkage specifier do?</p>
+  <ul class="options">
+    <li data-correct>Prevents C++ name mangling so symbols match C/assembly names</li>
+    <li>Makes a function inline</li>
+    <li>Links against the C standard library</li>
+    <li>Declares a function static</li>
+  </ul>
+</div>
+
+<div class="q" data-type="choice">
+  <p class="question">Why must global constructors be handled manually in a freestanding C++ kernel?</p>
+  <ul class="options">
+    <li data-correct>There is no runtime (libstdc++) to call them before main</li>
+    <li>Because the compiler forbids globals in kernels</li>
+    <li>Because constructors are not part of C++</li>
+    <li>Because the linker removes them automatically</li>
+  </ul>
+</div>
+
+<div class="q" data-type="tf">
+  <p class="question">True or false: in a kernel you must avoid or provide your own versions of new and delete because they normally come from the runtime.</p>
+  <ul class="options">
+    <li data-correct>True</li>
+    <li>False</li>
+  </ul>
+</div>
+
+<div class="q" data-type="fill">
+  <p class="question">The C++ standard function for a global constructor list that the kernel calls during startup is ____ (it takes no arguments).</p>
+  <input class="answer" data-answers="init array, __cxa_atexit, __libc_csu_init, static initialization">
+</div>
+
+</div>
+
 ## 🧪 Exercises & Projects
 
 The C++ track showed a kernel can be written in modern C++ without paying for exceptions or RTTI. These exercises sharpen the C↔C++ seam (`extern "C"`), the static-init gap, and the power-of-two operator overloads you'd provide later. Prereq: the C++ build loop from this README.

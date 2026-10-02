@@ -710,6 +710,43 @@ on. All are real and verifiable on YouTube.
 
 ---
 
+<div class="quiz" data-title="Quick check: C for OS dev">
+
+<div class="q" data-type="choice">
+  <p class="question">Why is C so widely used for kernel development?</p>
+  <ul class="options">
+    <li data-correct>It gives direct memory control with predictable machine-code output</li>
+    <li>It has automatic garbage collection</li>
+    <li>It is the fastest language to write</li>
+    <li>It hides all hardware details</li>
+  </ul>
+</div>
+
+<div class="q" data-type="choice">
+  <p class="question">What does the volatile keyword tell the compiler?</p>
+  <ul class="options">
+    <li data-correct>That a value may change outside the program flow, so it must be re-read each time</li>
+    <li>That a variable is stored in a register</li>
+    <li>That a function never returns</li>
+    <li>That a pointer is constant</li>
+  </ul>
+</div>
+
+<div class="q" data-type="tf">
+  <p class="question">True or false: writing to a fixed memory address such as the VGA buffer requires dereferencing a pointer cast to that address.</p>
+  <ul class="options">
+    <li data-correct>True</li>
+    <li>False</li>
+  </ul>
+</div>
+
+<div class="q" data-type="fill">
+  <p class="question">In a freestanding kernel you avoid the standard library; the entry point must be marked ____ so the linker does not rename it (the attribute is used on the main function).</p>
+  <input class="answer" data-answers="naked, no mangle, noreturn, freestanding">
+</div>
+
+</div>
+
 ## 🧪 Exercises & Projects
 
 You built the C track's Hello World on top of the shared five-step recipe. These exercises perturb that recipe one step at a time so the toolchain and boot become levers, not black boxes. Prereq: the C build loop from this README.
