@@ -118,6 +118,7 @@ nav:
       - "Go project": Example_OS_Project/go/README.md
       - "C# project": Example_OS_Project/csharp/README.md
   - Glossary: GLOSSARY/README.md
+  - "Video Library": videos/index.md
   - Resources:
       - "Curated Library (bookmarks)": resources/curated/README.md
       - OS Development: resources/curated/os-development.md
