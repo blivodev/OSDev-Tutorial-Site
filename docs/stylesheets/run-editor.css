@@ -1,0 +1,84 @@
+/* run-editor.css — styling for the Level-3 in-page kernel runner. */
+
+.run-editor {
+  margin: 1.2em 0;
+  border: 1px solid var(--md-default-fg-color--lightest, #333);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #1e1e1e;
+}
+
+.run-editor__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background: #2a2a2a;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.run-editor__label {
+  flex: 1;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #9aa0a6;
+  font-family: var(--md-code-font, monospace);
+}
+
+.run-editor__run,
+.run-editor__reset {
+  border: 0;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.run-editor__run {
+  background: #ffb300;
+  color: #1a1a1a;
+}
+.run-editor__run:hover { background: #ffc233; }
+.run-editor__run:disabled { opacity: 0.6; cursor: wait; }
+
+.run-editor__reset {
+  background: #3a3a3a;
+  color: #d0d0d0;
+}
+.run-editor__reset:hover { background: #474747; }
+
+.run-editor__host .CodeMirror {
+  height: auto;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  font-family: var(--md-code-font, "SFMono-Regular", Consolas, monospace);
+}
+
+.run-editor__out {
+  display: none;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  background: #0d0d0d;
+  color: #d4d4d4;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-top: 1px solid #3a3a3a;
+  max-height: 340px;
+  overflow: auto;
+  font-family: var(--md-code-font, "SFMono-Regular", Consolas, monospace);
+}
+.run-editor__out.is-ok { border-left: 3px solid #4caf50; }
+.run-editor__out.is-err { border-left: 3px solid #e53935; color: #ffb4a8; }
+
+.run-editor__meta {
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed #333;
+  color: #8a8a8a;
+  font-size: 0.72rem;
+}

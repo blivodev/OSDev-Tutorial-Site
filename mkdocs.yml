@@ -39,12 +39,14 @@ extra_css:
   - stylesheets/extra.css
   - stylesheets/quizzes.css
   - stylesheets/progress.css
+  - stylesheets/run-editor.css
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
   - javascripts/extra.js
   - javascripts/quizzes.js
   - javascripts/progress.js
+  - javascripts/run-editor.js
 
 markdown_extensions:
   - tables
@@ -78,6 +80,7 @@ plugins:
 nav:
   - Home: index.md
   - Choose a Path: paths/index.md
+  - "▶ Run Your Kernel (Live)": run.md
   - Language Paths:
       - "C":
           - C Path: paths/c/index.md
@@ -124,6 +127,7 @@ nav:
   - "News": /news/
   - Flashcards: flashcards/index.html
   - "Browse by Difficulty": browse/index.html
+  - "📚 Book Library": https://books.sektor9.dev/
   - "Learning Paths": learning-paths/index.md
   - "Interactive Diagrams": interactive/index.md
   - "Live Playground": playground/index.md
