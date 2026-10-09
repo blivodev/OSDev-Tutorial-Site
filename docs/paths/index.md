@@ -1,52 +1,48 @@
-# Choose Your Path
+<div class="s9-hero">
+  <div class="s9-badge-row"><span class="s9-chip">🧭 Choose Your Path</span><span class="s9-chip green">● self-contained tracks</span></div>
+  <h1>Pick one language, build a kernel</h1>
+  <p>Start here. Pick <b>one programming language</b> and follow its track all the way from beginner syntax to a bootable <b>"Hello World" operating system</b>. You don't need to read all five — each path is self-contained and weaves the shared OS concepts in as you need them.</p>
+  <div class="s9-note">💡 <b>New to programming?</b> Each path includes a beginner language tutorial first, so you learn the language <i>and</i> OS development together, step by step.</div>
+</div>
 
-Start here. Pick **one programming language** and follow its track all the way from
-beginner syntax to a bootable "Hello World" operating system. You don't need to read all
-five — each path is self-contained and weaves the shared OS concepts in as you need them.
+<div class="s9-sec"><span class="n">01</span> · Your language paths</div>
+<div class="s9-grid">
+  <a class="s9-card blue" href="c/index.md"><span class="ico">🇨</span><span class="ttl">C</span><span class="dsc">The classic OS language — pointers, memory, a real kernel, booted by GRUB.</span><span class="meta">Begin the C path</span><span class="arrow">→</span></a>
+  <a class="s9-card green" href="cpp/index.md"><span class="ico">➿</span><span class="ttl">C++</span><span class="dsc">C++ on bare metal — extern "C", objects without a runtime, a C++ kernel.</span><span class="meta">Begin the C++ path</span><span class="arrow">→</span></a>
+  <a class="s9-card amber" href="rust/index.md"><span class="ico">🦀</span><span class="ttl">Rust</span><span class="dsc">Safe systems programming — no_std, a panic handler, a Rust kernel with the bootloader crate.</span><span class="meta">Begin the Rust path</span><span class="arrow">→</span></a>
+  <a class="s9-card red" href="go/index.md"><span class="ico">🐹</span><span class="ttl">Go</span><span class="dsc">Go on bare metal — gccgo, terminals, a Multiboot kernel.</span><span class="meta">Begin the Go path</span><span class="arrow">→</span></a>
+  <a class="s9-card purple" href="csharp/index.md"><span class="ico">#️⃣</span><span class="ttl">C#</span><span class="dsc">The managed angle — why C# needs a framework, and Cosmos.</span><span class="meta">Begin the C# path</span><span class="arrow">→</span></a>
+</div>
 
-> 💡 **New to programming?** Each path includes a beginner language tutorial first, so you
-> learn the language *and* OS development together, step by step.
+<div class="s9-sec"><span class="n">02</span> · Core OS concepts (language-agnostic)</div>
+<p style="color:#8b95a7;font-size:.9rem">These explain <i>how computers and OSes work</i> — read them alongside any path (each path tells you when).</p>
+<div class="s9-grid">
+  <a class="s9-card" href="../synthesized_tutorials/00-introduction/01-how-a-computer-boots.md"><span class="ico">🚀</span><span class="ttl">How a computer boots</span><span class="dsc">The very first step.</span></a>
+  <a class="s9-card" href="../synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md"><span class="ico">🥾</span><span class="ttl">Bootloaders &amp; Multiboot</span><span class="dsc">How a kernel gets loaded.</span></a>
+  <a class="s9-card" href="../synthesized_tutorials/concepts/02-memory-management.md"><span class="ico">🧠</span><span class="ttl">Memory management</span><span class="dsc">Paging, allocation, the address space.</span></a>
+  <a class="s9-card" href="../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md"><span class="ico">🚨</span><span class="ttl">Interrupts &amp; the IDT</span><span class="dsc">How the CPU handles events.</span></a>
+  <a class="s9-card" href="../synthesized_tutorials/concepts/04-vga-text-mode.md"><span class="ico">🖥️</span><span class="ttl">VGA text mode</span><span class="dsc">Drawing characters to the screen.</span></a>
+  <a class="s9-card" href="../synthesized_tutorials/concepts/05-the-hello-world-of-oses.md"><span class="ico">👋</span><span class="ttl">The "Hello World of OSes"</span><span class="dsc">The full recipe, end to end.</span></a>
+</div>
 
----
+<div class="s9-sec"><span class="n">03</span> · Tools &amp; reference</div>
+<div class="s9-grid">
+  <a class="s9-card" href="../GLOSSARY/README.md"><span class="ico">🔤</span><span class="ttl">Glossary</span><span class="dsc">Hover-tooltips for every term.</span></a>
+  <a class="s9-card" href="../Example_OS_Project/README.md"><span class="ico">🧪</span><span class="ttl">Example OS project</span><span class="dsc">C, C++, Rust, Go, C#.</span></a>
+  <a class="s9-card" href="../resources/INDEX.md"><span class="ico">🔖</span><span class="ttl">Resource index</span><span class="dsc">Videos &amp; reading list.</span></a>
+</div>
 
-## 🧭 Your language paths
-
-| Track | What you'll do | Start |
-|-------|----------------|-------|
-| **C** | The classic OS language — pointers, memory, a real kernel, booted by GRUB. | [Begin the C path](c/index.md) |
-| **C++** | C++ on bare metal — `extern "C"`, objects without a runtime, a C++ kernel. | [Begin the C++ path](cpp/index.md) |
-| **Rust** | Safe systems programming — `no_std`, a panic handler, a Rust kernel with the bootloader crate. | [Begin the Rust path](rust/index.md) |
-| **Go** | Go on bare metal — gccgo, terminals, a Multiboot kernel. | [Begin the Go path](go/index.md) |
-| **C#** | The managed angle — why C# needs a framework, and Cosmos. | [Begin the C# path](csharp/index.md) |
-
----
-
-## 🧱 Core OS concepts (language-agnostic)
-
-These explain *how computers and OSes work* — read them alongside any path (each path tells you
-when). If you want the theory first:
-
-- [How a computer boots](../synthesized_tutorials/00-introduction/01-how-a-computer-boots.md)
-- [Bootloaders & the Multiboot protocol](../synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md)
-- [Memory management](../synthesized_tutorials/concepts/02-memory-management.md)
-- [Interrupts & the IDT](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md)
-- [VGA text mode](../synthesized_tutorials/concepts/04-vga-text-mode.md)
-- [The "Hello World of OSes" recipe](../synthesized_tutorials/concepts/05-the-hello-world-of-oses.md)
-
----
-
-## 🔍 Tools & reference
-
-- [Glossary (hover-tooltips for every term)](../GLOSSARY/README.md)
-- [Example OS project (C, C++, Rust, Go, C#)](../Example_OS_Project/README.md)
-- [Resource index & video collection](../resources/INDEX.md)
-
+<div class="s9-sec"><span class="n">04</span> · Start with a video</div>
+<div class="s9-note">Not sure where to begin? These are real, verified videos that give the big picture across the whole site's topic — watch one before picking a path.</div>
+<div class="s9-cta">
+  <a class="ghost" href="https://wiki.osdev.org/">📖 OSDev Wiki</a>
+  <a class="ghost" href="https://os.phil-opp.com/">🦀 Writing an OS in Rust</a>
+  <a class="ghost" href="https://www.gocosmos.org/">#️⃣ Cosmos OS</a>
+</div>
 
 ---
 
-## 🎬 Start with a video
-
-Not sure where to begin? These are real, verified videos that give the big picture across the whole site's topic — watch one before picking a path:
+*Keep the video embeds below — they render as collapsible watch-now blocks.*
 
 <details class="video-embed"><summary>▶ Watch: How a computer boots & why OS dev matters (overview)</summary>
 <iframe src="https://www.youtube-nocookie.com/embed/F9-yqoS7b8w" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
@@ -59,15 +55,3 @@ Not sure where to begin? These are real, verified videos that give the big pictu
 <details class="video-embed"><summary>▶ Watch: The Operating System Construction Kit — Cosmos (C#)</summary>
 <iframe src="https://www.youtube-nocookie.com/embed/Khff1xxyEHI" width="100%" height="400" style="border:0;border-radius:8px;" allowfullscreen></iframe>
 </details>
-
----
-
-## 🔗 Further resources (across all paths)
-
-- [OSDev Wiki — Expanded Main Page](https://wiki.osdev.org/) — the community's central hub for OS development.
-- [OSDev Wiki — Bare Bones](https://wiki.osdev.org/Bare_Bones) — the classic first kernel tutorial, in C.
-- [Learn the language you'll build in](https://go.dev/tour/) — each path's beginner tutorial links a free official language course.
-- [Philipp Oppermann — "Writing an OS in Rust"](https://os.phil-opp.com/) — a free, modern, blog-based kernel course.
-- [Cosmos OS](https://www.gocosmos.org/) — the C# operating system construction kit.
-- [Resource index & video collection](../resources/INDEX.md) — the site's own curated video and reading list.
-- [Glossary (hover-tooltips for every term)](../GLOSSARY/README.md) — every OS term you'll meet, defined.

@@ -1,40 +1,36 @@
-# 🧭 Learning Paths
+<div class="s9-hero">
+  <div class="s9-badge-row"><span class="s9-chip">🗺️ Learning Paths</span><span class="s9-chip green">● 12 tracks</span><span class="s9-chip amber">● progress checkboxes</span></div>
+  <h1>Curated, ordered learning tracks</h1>
+  <p>Not sure where to start — or what to read after what you just finished? Pick a <b>learning path</b>: a curated, ordered sequence that walks you from beginner to advanced through the hub's books, tutorials, and videos. Follow the steps in order, tick them off as you go, and the progress tracker keeps your place.</p>
+  <div class="s9-note">💡 <b>How to use:</b> open a path, start at step 1, and don't skip. Tick each step's checkbox when you finish it — your progress saves in your browser. Each path is also mirrored in the wiki as a "Path" book.</div>
+</div>
 
-Not sure where to start — or what to read after what you just finished? Pick a **learning path**: a curated, ordered sequence that walks you from beginner to advanced through the hub's books, tutorials, and videos. Follow the steps in order, tick them off as you go, and the progress tracker keeps your place.
+<div class="s9-sec"><span class="n">01</span> · 🖥️ OS Development paths</div>
+<div class="s9-grid">
+  <a class="s9-card blue" href="zero-to-kernel-c.md"><span class="ico">🇨</span><span class="ttl">Zero to Kernel in C</span><span class="dsc">Basics → build a real kernel in C.</span><span class="meta">12 steps · Beginner → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card amber" href="rust-os-dev.md"><span class="ico">🦀</span><span class="ttl">Rust OS Dev</span><span class="dsc">Basics → a modern OS in Rust.</span><span class="meta">12 steps · Beginner → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card green" href="cpp-kernel-track.md"><span class="ico">➿</span><span class="ttl">C++ Kernel Track</span><span class="dsc">C++ → a kernel in C++.</span><span class="meta">10 steps · Intermediate → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card red" href="go-os-dev.md"><span class="ico">🐹</span><span class="ttl">Go OS Dev</span><span class="dsc">Go → unikernels / systems Go.</span><span class="meta">8 steps · Beginner → Intermediate</span><span class="arrow">→</span></a>
+  <a class="s9-card purple" href="csharp-cosmos-track.md"><span class="ico">#️⃣</span><span class="ttl">C# / Cosmos Track</span><span class="dsc">C# → a kernel with Cosmos.</span><span class="meta">8 steps · Intermediate</span><span class="arrow">→</span></a>
+  <a class="s9-card" href="systems-architecture.md"><span class="ico">⚙️</span><span class="ttl">Systems Architecture</span><span class="dsc">CPU, memory, hardware deep dive.</span><span class="meta">12 steps · Intermediate → Advanced</span><span class="arrow">→</span></a>
+</div>
 
-Each step has a **difficulty badge** so you always know what level you're at:
+<div class="s9-sec"><span class="n">02</span> · ⚡ Electronics &amp; Microcontrollers paths</div>
+<div class="s9-grid">
+  <a class="s9-card blue" href="zero-to-pcb.md"><span class="ico">🔌</span><span class="ttl">Electronics Zero to PCB</span><span class="dsc">Basics → design a real PCB.</span><span class="meta">12 steps · Beginner → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card green" href="arduino-bare-metal.md"><span class="ico">🛠️</span><span class="ttl">Arduino to Bare-Metal</span><span class="dsc">Arduino → AVR register-level C.</span><span class="meta">10 steps · Beginner → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card amber" href="esp32-iot.md"><span class="ico">📡</span><span class="ttl">ESP32 / IoT Mastery</span><span class="dsc">Basics → advanced IoT.</span><span class="meta">12 steps · Beginner → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card red" href="embedded-c-rust.md"><span class="ico">⚙️</span><span class="ttl">Embedded C &amp; Rust</span><span class="dsc">C → embedded Rust.</span><span class="meta">10 steps · Intermediate → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card purple" href="rtos-engineer.md"><span class="ico">⏱️</span><span class="ttl">RTOS Engineer</span><span class="dsc">Real-time systems.</span><span class="meta">8 steps · Intermediate → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card" href="circuit-design-test.md"><span class="ico">🧪</span><span class="ttl">Circuit Design &amp; Test</span><span class="dsc">Electronics lab skills.</span><span class="meta">8 steps · Beginner → Intermediate</span><span class="arrow">→</span></a>
+</div>
 
-- 🟢 **Beginner** — no prior knowledge assumed
-- 🟠 **Intermediate** — some programming / basic hardware background
-- 🔴 **Hard** — comfortable with the fundamentals, building serious systems
-- ⚫ **Advanced / Very Hard** — production-grade systems, research-level material
+<div class="s9-sec"><span class="n">03</span> · Difficulty badges</div>
+<div class="s9-steps">
+  <div class="s9-step"><span class="dot b"></span><span class="lbl">🟢 Beginner</span><span class="txt">no prior knowledge assumed</span></div>
+  <div class="s9-step"><span class="dot i"></span><span class="lbl">🟠 Intermediate</span><span class="txt">some programming / basic hardware background</span></div>
+  <div class="s9-step"><span class="dot a"></span><span class="lbl">🔴 Hard</span><span class="txt">comfortable with the fundamentals, building serious systems</span></div>
+  <div class="s9-step"><span class="dot a"></span><span class="lbl">⚫ Advanced</span><span class="txt">production-grade systems, research-level material</span></div>
+</div>
 
-> 💡 **How to use:** open a path, start at step 1, and don't skip. Tick each step's checkbox when you finish it — your progress saves in your browser. Each path is also mirrored in the wiki as a "Path" book.
-
----
-
-## 🖥️ OS Development paths
-
-| Path | Starting point → destination | Steps |
-|------|------------------------------|-------|
-| [Zero to Kernel in C](zero-to-kernel-c.md) | 🟢 Basics → 🔴 Build a real kernel in C | 12 |
-| [Rust OS Dev](rust-os-dev.md) | 🟢 Basics → ⚫ Modern OS in Rust | 12 |
-| [C++ Kernel Track](cpp-kernel-track.md) | 🟠 C++ → 🔴 Kernel in C++ | 10 |
-| [Go OS Dev](go-os-dev.md) | 🟢 Go → 🟠 Unikernel / systems Go | 8 |
-| [C# / Cosmos Track](csharp-cosmos-track.md) | 🟠 C# → 🟠 Kernel with Cosmos | 8 |
-| [Systems Architecture Deep Dive](systems-architecture.md) | 🟠 → ⚫ CPU, memory, hardware | 12 |
-
-## ⚡ Electronics & Microcontrollers paths
-
-| Path | Starting point → destination | Steps |
-|------|------------------------------|-------|
-| [Electronics Zero to PCB](zero-to-pcb.md) | 🟢 Basics → 🔴 Design a real PCB | 12 |
-| [Arduino to Bare-Metal](arduino-bare-metal.md) | 🟢 Arduino → 🔴 AVR register-level C | 10 |
-| [ESP32 / IoT Mastery](esp32-iot.md) | 🟢 Basics → ⚫ Advanced IoT | 12 |
-| [Embedded C & Rust](embedded-c-rust.md) | 🟠 C → 🔴 Embedded Rust | 10 |
-| [RTOS Engineer](rtos-engineer.md) | 🟠 → ⚫ Real-time systems | 8 |
-| [Circuit Design & Test](circuit-design-test.md) | 🟢 → 🟠 Electronics lab skills | 8 |
-
----
-
-*Each path links real, free resources from the hub — books in the wiki, docs tutorials, and video playlists. Everything is behind the `osdev` login.*
+<div class="s9-note">📌 Each path links real, free resources from the hub — books in the wiki, docs tutorials, and video playlists. Everything is behind the <code>osdev</code> login.</div>
