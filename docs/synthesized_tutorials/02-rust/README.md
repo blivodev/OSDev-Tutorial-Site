@@ -133,9 +133,9 @@ flowchart LR
         A["cargo build<br/>--target x86_64-unknown-none"] --> B["#![no_std]<br/>no stdlib linked"]
         B --> C["#![no_main]<br/>no Rust runtime"]
     end
-    C --> D["#[no_mangle] pub extern \"C\" fn _start() -> !"]
+    C --> D["#[no_mangle] pub extern &quot;C&quot; fn _start() -> !"]
     D --> E["unsafe write to 0xB8000"]
-    E --> F["loop { asm!(\"hlt\") }"]
+    E --> F["loop { asm!(&quot;hlt&quot;) }"]
     F --> G["#[panic_handler]<br/>halts on error"]
     G --> H["tree rust → (stable) kernel ELF + (nightly) bootimage"]
 ```
