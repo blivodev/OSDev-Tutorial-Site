@@ -2,13 +2,13 @@
 
 > ⚠️ **Important edge case (per project plan):** There is **no** complete free "from-scratch
 > bare-metal" book that a beginner can realistically follow in C#. C# compiles to
-> **[managed IL](../GLOSSARY/managed-il.md "The intermediate language C# compiles to, which needs a runtime")** and relies on a runtime; bringing it to bare metal requires a
+> **[managed IL](/GLOSSARY/managed-il/ "The intermediate language C# compiles to, which needs a runtime")** and relies on a runtime; bringing it to bare metal requires a
 > *massive* framework. So this path takes the realistic route: we keep the framework as the
 > primary reference, provide a well-commented boilerplate, and explain **why** C# is
 > different — because understanding *why* is the whole educational value of this track.
 
 Every other path in this hub (C, C++, Rust, Go) shows you writing to `0xB8000` by hand. **C#
-does not do that in practice.** C# code runs on a managed runtime ([.NET](../GLOSSARY/managed-il.md "The intermediate language C# compiles to, which needs a runtime")) that
+does not do that in practice.** C# code runs on a managed runtime ([.NET](/GLOSSARY/managed-il/ "The intermediate language C# compiles to, which needs a runtime")) that
 provides a GC, a JIT/AOT compiler, reflection, and the Base Class Library — none of which
 *exist* on bare metal until an enormous amount of machinery is built. The way a beginner (or
 anyone) actually ships a C# OS is through **Cosmos**, an OS-construction kit that compiles
@@ -25,8 +25,8 @@ kernel from [`Example_OS_Project/csharp/`](../Example_OS_Project/csharp/).
 ### Cosmos OS — C# Open-Source Managed Operating System
 - **Where:** https://www.gocosmos.org/ | https://github.com/CosmosOS/Cosmos
 - **License:** Open source (BSD)
-- **Local copy:** [`Cosmos/`](Cosmos/) (full source)
-- **What it is:** An "Operating System **Kit**" (OS Legos). You author your kernel in modern C#; [Cosmos](../GLOSSARY/cosmos.md "An open-source C# operating-system kit") (via [NativeAOT](../GLOSSARY/nativeaot.md ".NET's ahead-of-time compiler that turns IL into native code") / [IL2CPU](../GLOSSARY/il2cpu.md "Cosmos's original IL-to-x86 compiler")) compiles it down to a bootable ISO loaded by the **[Limine](../GLOSSARY/limine.md "A modern bootloader supporting Multiboot 2 and 64-bit kernels")** bootloader. Supports x64 and ARM64. Includes its own GC, scheduler, drivers, network, filesystem.
+- **Local copy:** [Cosmos source on GitHub](https://github.com/CosmosOS/Cosmos)
+- **What it is:** An "Operating System **Kit**" (OS Legos). You author your kernel in modern C#; [Cosmos](/GLOSSARY/cosmos/ "An open-source C# operating-system kit") (via [NativeAOT](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code") / [IL2CPU](/GLOSSARY/il2cpu/ "Cosmos's original IL-to-x86 compiler")) compiles it down to a bootable ISO loaded by the **[Limine](/GLOSSARY/limine/ "A modern bootloader supporting Multiboot 2 and 64-bit kernels")** bootloader. Supports x64 and ARM64. Includes its own GC, scheduler, drivers, network, filesystem.
 - **Why it's the choice for C#:** It's the only practical free path to *shipping a C# OS*, even if you're not hand-writing a bootloader.
 
 ## What you'll build in this path
@@ -34,11 +34,11 @@ A **Cosmos-style** C# kernel template: `Kernel.cs` with `Kernel.BeforeRun()` / `
 
 ## Supporting material already in this hub
 - Well-commented Cosmos-style boilerplate → [`Example_OS_Project/csharp/`](../Example_OS_Project/csharp/)
-- Synthesized consolidated beginner guide (C# chapter = *why C# is different*) → [`synthesized_tutorials/06-csharp/`](../synthesized_tutorials/06-csharp/)
+- Synthesized consolidated beginner guide (C# chapter = *why C# is different*) → [`synthesized_tutorials/05-csharp/`](../synthesized_tutorials/05-csharp/)
 - Concepts (bootloaders, memory, VGA) → [`synthesized_tutorials/concepts/`](../synthesized_tutorials/concepts/)
 
 ## Toolchain needed (see `Example_OS_Project/docs/setup.md`)
-`.NET SDK` (present on the host), Cosmos DevKit, **Visual Studio 2022** (for the debugger — recommended), [QEMU](../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing") or VMware for running.
+`.NET SDK` (present on the host), Cosmos DevKit, **Visual Studio 2022** (for the debugger — recommended), [QEMU](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing") or VMware for running.
 
 ---
 
@@ -83,7 +83,7 @@ structural reasons:
 - **The Base Class Library assumes the OS.** `System.IO`, `System.Net`, `Console` are all
   built on OS services (files, sockets, a console). On bare metal your kernel must reimplement
   those services — that's the BCL-as-OS problem.
-- **A GC must manage memory.** [`new`](../GLOSSARY/garbage-collection.md "Automatic memory reclamation; required by managed runtimes like Go and C#") requires a garbage
+- **A GC must manage memory.** [`new`](/GLOSSARY/garbage-collection/ "Automatic memory reclamation; required by managed runtimes like Go and C#") requires a garbage
   collector that scans and frees the heap. A GC needs a memory allocator (which needs to know
   physical RAM) and a way to run periodically (which needs a timer/scheduler).
 
@@ -329,7 +329,7 @@ the project file:
 
 Then F5 (or the Cosmos "Run" command in VS) → Cosmos compiles your IL to native code
 (via NativeAOT / IL2CPU), packages it into a bootable ISO with the
-[Limine](../GLOSSARY/limine.md "A modern bootloader supporting Multiboot 2 and 64-bit kernels") bootloader, and boots it in a VM. The debugger works: you can set breakpoints in
+[Limine](/GLOSSARY/limine/ "A modern bootloader supporting Multiboot 2 and 64-bit kernels") bootloader, and boots it in a VM. The debugger works: you can set breakpoints in
 your `Kernel.cs` and inspect state just like a normal C# app.
 
 ### 3.3 The build/boot pipeline
@@ -399,7 +399,7 @@ Console.WriteLine("MY-OS-V1 booted.");
 | Concept | Where | Why it's next |
 |---------|-------|---------------|
 | The C path (foundation) | [`path_c_os/README.md`](../path_c_os/README.md) | learn what a framebuffer/boot actually *is* before C#'s abstractions hide it |
-| The C# chapter deep-dive | [`synthesized_tutorials/06-csharp/README.md`](../synthesized_tutorials/06-csharp/README.md) | the full "why C# is different" argument |
+| The C# chapter deep-dive | [`synthesized_tutorials/05-csharp/README.md`](../synthesized_tutorials/05-csharp/README.md) | the full "why C# is different" argument |
 | Cosmos Getting Started | https://github.com/CosmosOS/Cosmos/wiki/Getting-Started | the official first-boot walkthrough |
 | Cosmos internals (IL2CPU/NativeAOT) | [`csharp/README.md`](../Example_OS_Project/csharp/README.md) + the Cosmos wiki | understand how your IL becomes native |
 | VGA / GUI in Cosmos | [`concepts/04-vga-text-mode.md`](../synthesized_tutorials/concepts/04-vga-text-mode.md) + Cosmos graphics docs | grow from text console to graphics |

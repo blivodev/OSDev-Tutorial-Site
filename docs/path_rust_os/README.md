@@ -19,12 +19,12 @@ Rust needs **no cross-compiler** — just a nightly toolchain plus the `bootimag
 ### Writing an OS in Rust — Philipp Oppermann (phil-opp)
 - **Where:** https://os.phil-opp.com/ | https://github.com/phil-opp/blog_os
 - **License:** Free; blog content CC-BY-NC, code Apache-2.0/MIT
-- **Local copy:** [`blog_os/`](blog_os/) (full GitHub source, 144 markdown post sources under `blog/content/edition-2/`)
-- **Why chosen:** *The* most famous free Rust OS-development series. Perfectly matches **Path B (Rust beginner → OS beginner)**. Text-heavy, diagram-rich, step-by-step. Covers `no_std` [freestanding](../GLOSSARY/freestanding.md "Code compiled assuming no OS or standard library exists") binaries, [panic handler](../GLOSSARY/panic-handler.md "The function that runs when a Rust kernel panics (no OS to report to)"), [bootloader](../GLOSSARY/bootloader.md "A small program that loads your kernel into memory and jumps to it") + `bootimage` boot, VGA text buffer, [interrupts](../GLOSSARY/interrupt.md "A hardware signal that makes the CPU run a registered handler"), [paging](../GLOSSARY/paging.md "Translates virtual addresses to physical RAM via page tables"), [heap allocation](../GLOSSARY/heap-allocation.md "Dynamically allocating memory at runtime; a kernel does it itself"), and more.
+- **Local copy:** [blog_os source on GitHub](https://github.com/phil-opp/blog_os)rkdown post sources under `blog/content/edition-2/`)
+- **Why chosen:** *The* most famous free Rust OS-development series. Perfectly matches **Path B (Rust beginner → OS beginner)**. Text-heavy, diagram-rich, step-by-step. Covers `no_std` [freestanding](/GLOSSARY/freestanding/ "Code compiled assuming no OS or standard library exists") binaries, [panic handler](/GLOSSARY/panic-handler/ "The function that runs when a Rust kernel panics (no OS to report to)"), [bootloader](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it") + `bootimage` boot, VGA text buffer, [interrupts](/GLOSSARY/interrupt/ "A hardware signal that makes the CPU run a registered handler"), [paging](/GLOSSARY/paging/ "Translates virtual addresses to physical RAM via page tables"), [heap allocation](/GLOSSARY/heap-allocation/ "Dynamically allocating memory at runtime; a kernel does it itself"), and more.
 
 ## What you'll build in this path
 - A freestanding Rust binary (`#![no_std]`) with a custom panic handler
-- A minimal x86_64 [kernel](../GLOSSARY/kernel.md "The core program that owns the machine and manages hardware") that prints to the VGA text buffer in [QEMU](../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing")
+- A minimal x86_64 [kernel](/GLOSSARY/kernel/ "The core program that owns the machine and manages hardware") that prints to the VGA text buffer in [QEMU](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing")
 - Booted using the `bootloader` crate + `bootimage` (no cross-compiler needed — just Rust nightly)
 
 ## Supporting material already in this hub
@@ -58,7 +58,7 @@ poke raw memory. So the beginner Rust you need is really three ideas working tog
 //   no_main : there is no std main() wrapper; we must provide _start.
 ```
 
-- [`no_std`](../GLOSSARY/no_std.md "A Rust attribute that disables the standard library to run on bare metal") means "don't bring the standard library". `std` assumes an OS (it does
+- [`no_std`](/GLOSSARY/no_std/ "A Rust attribute that disables the standard library to run on bare metal") means "don't bring the standard library". `std` assumes an OS (it does
   `malloc`, threads, files, networking). A kernel has none of those, so we drop it.
 - What you *kept* is `core`, the allocation-free subset (iterators, `format_args!` with an
   explicit writer, trait machinery, atomics). `alloc` is available too — but only once *you*
@@ -386,15 +386,15 @@ The natural order, each mapping to a video below:
 
 | Step | What you build | Concept glossary |
 |------|----------------|------------------|
-| 1. Freestanding binary | `_start`, panic handler | [`no_std`](../GLOSSARY/no_std.md "A Rust attribute that disables the standard library to run on bare metal"), [`panic-handler`](../GLOSSARY/panic-handler.md "The function that runs when a Rust kernel panics (no OS to report to)") |
-| 2. Minimal kernel | VGA print | [`vga-text-mode`](../GLOSSARY/vga-text-mode.md "The 80x25 character display mode a minimal kernel writes to") |
-| 3. VGA text mode | cursor, colors, formatting | [`vga-framebuffer`](../GLOSSARY/vga-framebuffer.md "The block of memory at 0xB8000 where the screen text lives") |
-| 4. Testing | unit + integration tests in QEMU | [`qemu`](../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing") |
-| 5. CPU exceptions | [IDT](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives"), ISRs, double faults | [`idt`](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives"), [`isr`](../GLOSSARY/isr.md "The handler function run for a specific interrupt number") |
-| 7. Hardware interrupts | PIC/APIC, timer, keyboard | [`pic-apic`](../GLOSSARY/pic-apic.md "Chips that route hardware interrupts (timer, keyboard) to the CPU") |
-| 8–9. Paging | page tables, virtual memory | [`paging`](../GLOSSARY/paging.md "Translates virtual addresses to physical RAM via page tables"), [`physical-virtual-memory`](../GLOSSARY/physical-virtual-memory.md "Real RAM addresses vs the addresses your code sees after paging") |
-| 10–11. Heap + allocators | `alloc` crate, bump/linked-list allocators | [`heap-allocation`](../GLOSSARY/heap-allocation.md "Dynamically allocating memory at runtime; a kernel does it itself"), [`frame-allocator`](../GLOSSARY/frame-allocator.md "The simplest memory manager that tracks which 4 KiB physical pages are free") |
-| 12. Async/await | an executor, multitasking | [`syscall`](../GLOSSARY/syscall.md "The way user programs ask the kernel for services") |
+| 1. Freestanding binary | `_start`, panic handler | [`no_std`](/GLOSSARY/no_std/ "A Rust attribute that disables the standard library to run on bare metal"), [`panic-handler`](/GLOSSARY/panic-handler/ "The function that runs when a Rust kernel panics (no OS to report to)") |
+| 2. Minimal kernel | VGA print | [`vga-text-mode`](/GLOSSARY/vga-text-mode/ "The 80x25 character display mode a minimal kernel writes to") |
+| 3. VGA text mode | cursor, colors, formatting | [`vga-framebuffer`](/GLOSSARY/vga-framebuffer/ "The block of memory at 0xB8000 where the screen text lives") |
+| 4. Testing | unit + integration tests in QEMU | [`qemu`](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing") |
+| 5. CPU exceptions | [IDT](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives"), ISRs, double faults | [`idt`](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives"), [`isr`](/GLOSSARY/isr/ "The handler function run for a specific interrupt number") |
+| 7. Hardware interrupts | PIC/APIC, timer, keyboard | [`pic-apic`](/GLOSSARY/pic-apic/ "Chips that route hardware interrupts (timer, keyboard) to the CPU") |
+| 8–9. Paging | page tables, virtual memory | [`paging`](/GLOSSARY/paging/ "Translates virtual addresses to physical RAM via page tables"), [`physical-virtual-memory`](/GLOSSARY/physical-virtual-memory/ "Real RAM addresses vs the addresses your code sees after paging") |
+| 10–11. Heap + allocators | `alloc` crate, bump/linked-list allocators | [`heap-allocation`](/GLOSSARY/heap-allocation/ "Dynamically allocating memory at runtime; a kernel does it itself"), [`frame-allocator`](/GLOSSARY/frame-allocator/ "The simplest memory manager that tracks which 4 KiB physical pages are free") |
+| 12. Async/await | an executor, multitasking | [`syscall`](/GLOSSARY/syscall/ "The way user programs ask the kernel for services") |
 
 Other Rust OS ecosystems and series (Raspberry Pi tutorials, rCore, Redox) are listed in
 [`resources/curated/language-rust.md`](../resources/curated/language-rust.md).
@@ -578,7 +578,7 @@ build loop from this page — ideally `make -C Example_OS_Project/rust run-rust`
 
 - [ ] **H1. Port an interrupt** (~3 hr). Follow the roadmap to add the PIT timer
       ([concepts/03](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md)) so your
-      kernel prints a tick counter. This exercises the [IDT](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives") and the `x86_64` crate's
+      kernel prints a tick counter. This exercises the [IDT](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives") and the `x86_64` crate's
       interrupt machinery in Rust.
 - [ ] **H2. Compare against C and C++** (~1.5 hr). Put
       [`Example_OS_Project/rust/src/main.rs`](../Example_OS_Project/rust/src/main.rs) next to

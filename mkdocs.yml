@@ -120,9 +120,9 @@ nav:
       - Example_OS_Project/README.md
       - "Setup & build guide": Example_OS_Project/docs/setup.md
       - "Phoenix Code setup": Example_OS_Project/docs/phoenix-code.md
-      - "Rust project": Example_OS_Project/rust/README.md
-      - "Go project": Example_OS_Project/go/README.md
-      - "C# project": Example_OS_Project/csharp/README.md
+      - "Rust project": Example_OS_Project/rust-README.md
+      - "Go project": Example_OS_Project/go-README.md
+      - "C# project": Example_OS_Project/csharp-README.md
   - Glossary: GLOSSARY/README.md
   - "Video Library": videos/index.md
   - "News": /news/

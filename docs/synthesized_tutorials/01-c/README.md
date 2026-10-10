@@ -30,7 +30,7 @@ There is no `libc` beneath it, no `printf`, no `malloc`, no runtime that calls
 `main`. The OSDev world calls this **freestanding** C — the whole language
 minus the standard library.
 
-[`freestanding`](../../GLOSSARY/freestanding.md "Code compiled assuming no OS or standard library exists")
+[`freestanding`](/GLOSSARY/freestanding/ "Code compiled assuming no OS or standard library exists")
 is a real phrase from the C standard. The C standard itself only requires a
 freestanding implementation to provide a handful of headers
 (`<float.h>`, `<limits.h>`, `<stdarg.h>`, `<stddef.h>`, `<stdint.h>`, …) and
@@ -139,7 +139,7 @@ load a kernel is at **1 MiB**. Below that is off-limits reserved hardware.
 This is why the linker script in Step 4 says `. = 1M;` and why the VGA address
 is a bare number: the kernel's memory map is **hardware reality**, not
 something the OS decides. See
-[`physical-virtual-memory`](../../GLOSSARY/physical-virtual-memory.md "Physical RAM addresses vs. the virtual addresses your code sees")
+[`physical-virtual-memory`](/GLOSSARY/physical-virtual-memory/ "Physical RAM addresses vs. the virtual addresses your code sees")
 for where this gets more complex later.
 
 ---
@@ -154,7 +154,7 @@ toolchain.
 ## Step 1 — `boot.s` (the Multiboot bootstrap)
 
 Every C bare-metal kernel needs a tiny assembly file to (a) declare the
-[Multiboot](../../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") header so a [bootloader](../../GLOSSARY/bootloader.md "A small program that loads your kernel into memory and jumps to it") recognizes it, and (b) give the CPU a
+[Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") header so a [bootloader](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it") recognizes it, and (b) give the CPU a
 stack (it has none when it boots). Full file: `c/boot.s`.
 
 Let's read the whole thing, because it's short enough to fully understand.
@@ -336,7 +336,7 @@ Notice the `for (;;) /* spin */;` at the end. This is C's answer to the
 assembly `.Lhang` loop: once our text is on screen, there is nothing left to do
 and no OS to go back to, so we busy-spin forever. A "real" kernel would park
 the CPU with the `hlt` instruction (see
-[`hlt-instruction`](../../GLOSSARY/hlt-instruction.md "An x86 instruction that parks the CPU until an interrupt")) between interrupts instead of burning power
+[`hlt-instruction`](/GLOSSARY/hlt-instruction/ "An x86 instruction that parks the CPU until an interrupt")) between interrupts instead of burning power
 spinning — we'll get there.
 
 ## Step 3 — `linker.ld` (where the kernel lives in memory)
@@ -359,7 +359,7 @@ Three things to notice:
 
 - **`. = 1M;`** — the location counter starts at 1 MiB. Every symbol in the
   binary gets addresses ≥ 1 MiB, matching where the bootloader puts us in
-  memory (see [`linker`](../../GLOSSARY/linker.md "The tool that assigns addresses to code and data and resolves cross-file references")).
+  memory (see [`linker`](/GLOSSARY/linker/ "The tool that assigns addresses to code and data and resolves cross-file references")).
 - **`*(.multiboot)` first** — the Multiboot header must be at the very start
   of the image so the bootloader can find it. Putting it first in `.text` does
   exactly that.
@@ -368,7 +368,7 @@ Three things to notice:
   and not stored on disk, so a 16 KiB stack costs the image almost nothing.
 
 `ENTRY(_start)` is the symbol the bootloader's `jmp` will land on — the
-[`entry-point`](../../GLOSSARY/entry-point.md "The symbol (usually _start) the bootloader jumps to") for the whole kernel.
+[`entry-point`](/GLOSSARY/entry-point/ "The symbol (usually _start) the bootloader jumps to") for the whole kernel.
 
 ## Step 4 — build & run
 
@@ -396,8 +396,8 @@ The C kernel's `CFLAGS` are the same flags the whole OSDev world lives on:
 
 Why `-m32`? Multiboot v1 (the protocol this kernel uses) boots the CPU into
 **32-bit protected mode**. The kernels later switch to **long mode**
-(64-bit) — see [`protected-mode`](../../GLOSSARY/protected-mode.md "The 32-bit CPU mode where Multiboot v1 kernels boot") and
-[`long-mode`](../../GLOSSARY/long-mode.md "The 64-bit CPU mode a modern kernel switches into").
+(64-bit) — see [`protected-mode`](/GLOSSARY/protected-mode/ "The 32-bit CPU mode where Multiboot v1 kernels boot") and
+[`long-mode`](/GLOSSARY/long-mode/ "The 64-bit CPU mode a modern kernel switches into").
 
 ### `make run-c` in QEMU
 
@@ -405,7 +405,7 @@ Why `-m32`? Multiboot v1 (the protocol this kernel uses) boots the CPU into
 make run-c     # = qemu-system-i386 -kernel kernel.bin
 ```
 
-[`QEMU`](../../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing") is a CPU emulator: it faithfully runs your x86 kernel without
+[`QEMU`](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing") is a CPU emulator: it faithfully runs your x86 kernel without
 risking real hardware. `-kernel` asks QEMU's built-in bootloader to load a
 Multiboot kernel directly — a fast path that skips the disk-image step.
 
@@ -659,9 +659,9 @@ dump so you can log what happens *before* the screen is ready — the project's
 ## Bridge to OS concepts
 
 > **Bridge to OS concepts:** you just touched three core OS ideas —
-> **[bootloaders](../../GLOSSARY/bootloader.md "A small program that loads your kernel into memory and jumps to it")/[Multiboot](../../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")** (concepts/01), **memory layout** via the linker
+> **[bootloaders](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it")/[Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")** (concepts/01), **memory layout** via the linker
 > script (concepts/02), and **direct hardware I/O** through the
-> [VGA framebuffer](../../GLOSSARY/vga-framebuffer.md "The memory at 0xB8000 where screen text is written") (concepts/04).
+> [VGA framebuffer](/GLOSSARY/vga-framebuffer/ "The memory at 0xB8000 where screen text is written") (concepts/04).
 
 ---
 

@@ -25,18 +25,18 @@ of it (same `boot.s`, same `linker.ld`, same Multiboot recipe).
 - **License:** Open wiki (community-reviewed)
 - **Local copy:** [`Go_Bare_Bones.md`](Go_Bare_Bones.md)
 - **Difficulty:** Medium (it's built on top of the C Bare Bones tutorial)
-- **Why chosen:** The canonical free Go minimal-kernel tutorial. Uses an `i686-elf-gccgo` [cross-compiler](../GLOSSARY/cross-compiler.md "A compiler that builds code for a different CPU/OS than the one it runs on"). You implement Go-runtime stubs (e.g. `__go_register_gc_roots`, `__go_runtime_error`) as empty functions, then write `kernel.go` + `terminal.go` and link with a `linker.ld`.
+- **Why chosen:** The canonical free Go minimal-kernel tutorial. Uses an `i686-elf-gccgo` [cross-compiler](/GLOSSARY/cross-compiler/ "A compiler that builds code for a different CPU/OS than the one it runs on"). You implement Go-runtime stubs (e.g. `__go_register_gc_roots`, `__go_runtime_error`) as empty functions, then write `kernel.go` + `terminal.go` and link with a `linker.ld`.
 
 ### (Optional) Realistic frameworks for later
-- **eggos** (https://github.com/alexflint/eggos) — a Go **unikernel** running on [x86](../GLOSSARY/x86.md "The CPU architecture family this hub targets") bare metal; an excellent advanced follow-up.
+- **eggos** (https://github.com/alexflint/eggos) — a Go **unikernel** running on [x86](/GLOSSARY/x86/ "The CPU architecture family this hub targets") bare metal; an excellent advanced follow-up.
 - **TamaGo** — the production framework for bare-metal Go.
 
 ## What you'll build in this path
-A minimal Go kernel printing **"Hello, Kernel World!"** via the VGA text buffer, booted by [Multiboot](../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002").
+A minimal Go kernel printing **"Hello, Kernel World!"** via the VGA text buffer, booted by [Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002").
 
 ## Supporting material already in this hub
 - Fully-commented minimal implementation → [`Example_OS_Project/go/`](../Example_OS_Project/go/)
-- Synthesized consolidated beginner guide → [`synthesized_tutorials/05-go/`](../synthesized_tutorials/05-go/)
+- Synthesized consolidated beginner guide → [`synthesized_tutorials/04-go/`](../synthesized_tutorials/04-go/)
 - Concepts (bootloaders, memory, VGA) → [`synthesized_tutorials/concepts/`](../synthesized_tutorials/concepts/)
 
 ## Toolchain needed (see `Example_OS_Project/docs/setup.md`)
@@ -111,14 +111,14 @@ Rust — it's the explicit "this language's runtime would do something here, but
 what that means on bare metal." **You're literally deciding that, for this minimal kernel,
 Go's GC registration and runtime error handling are no-ops.**
 
-### 1.3 Why Go needs a [GC](../GLOSSARY/garbage-collection.md "Automatic memory reclamation; required by managed runtimes like Go and C#") — and why that's a problem here
+### 1.3 Why Go needs a [GC](/GLOSSARY/garbage-collection/ "Automatic memory reclamation; required by managed runtimes like Go and C#") — and why that's a problem here
 
 Go programs get memory-safe `new`/`make` for free because the runtime ships a **garbage
 collector**: it tracks allocated objects and frees them when they're unreachable. On a hosted
 machine, the OS gives the runtime RAM to manage. On bare metal, *you* are the OS — so a Go
 kernel that wants to allocate must:
 
-1. **Find some RAM** the kernel isn't using (a [frame allocator](../GLOSSARY/frame-allocator.md "The simplest memory manager that tracks which 4 KiB physical pages are free")),
+1. **Find some RAM** the kernel isn't using (a [frame allocator](/GLOSSARY/frame-allocator/ "The simplest memory manager that tracks which 4 KiB physical pages are free")),
 2. **Hand it to the Go runtime**, and
 3. **Have the GC actually run** (which needs scheduler/timer hooks).
 
@@ -439,14 +439,14 @@ The generic boot pitfalls are shared with C. The Go-specific ones:
 | Memory management | [`concepts/02-memory-management.md`](../synthesized_tutorials/concepts/02-memory-management.md) | before Go can allocate, you must own the RAM |
 | A Go allocator (sbrk) | OSDev Go Bare Bones final note | the documented blocker for "Go can do more" |
 | VGA text mode deep-dive | [`concepts/04-vga-text-mode.md`](../synthesized_tutorials/concepts/04-vga-text-mode.md) | grow `writeCell` into scrollback, colors, cursor |
-| The Go chapter deep-dive | [`synthesized_tutorials/05-go/README.md`](../synthesized_tutorials/05-go/README.md) | a longer read-along version of this page |
+| The Go chapter deep-dive | [`synthesized_tutorials/04-go/README.md`](../synthesized_tutorials/04-go/README.md) | a longer read-along version of this page |
 | TamaGo / eggos frameworks | the curated Go list | production bare-metal Go that pre-solves the runtime |
 | The Rust path (contrast) | [`path_rust_os/README.md`](../path_rust_os/README.md) | Rust solves memory safety *without* a runtime — a powerful contrast |
 
 The most instructive next step is to **make `writeCell` actually write** (fill in the
 `unsafe.Pointer` lines) and add a second color, so your kernel visibly does the raw memory
 work that Go normally hides. Then try adding a simple uptime counter. When you hit the wall
-where Go wants to allocate, you'll understand — viscerally — why a [GC](../GLOSSARY/garbage-collection.md "Automatic memory reclamation; required by managed runtimes like Go and C#") needs an OS, and what
+where Go wants to allocate, you'll understand — viscerally — why a [GC](/GLOSSARY/garbage-collection/ "Automatic memory reclamation; required by managed runtimes like Go and C#") needs an OS, and what
 frameworks like eggos provide.
 
 ---
@@ -614,8 +614,8 @@ means an `i686-elf-gccgo` cross-compiler).
 
 **Hard**
 
-- [ ] **H1. Add a minimal tracker / uptime** (~3 hr). [CPUs and timers](../GLOSSARY/interrupt.md "A hardware signal that makes the CPU run a registered handler")
-      via the PIT need port I/O and an [IDT](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives") — significantly harder in Go than C.
+- [ ] **H1. Add a minimal tracker / uptime** (~3 hr). [CPUs and timers](/GLOSSARY/interrupt/ "A hardware signal that makes the CPU run a registered handler")
+      via the PIT need port I/O and an [IDT](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives") — significantly harder in Go than C.
       Either port the concept from [concepts/03](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md) or, more pragmatically, build a *simple busy-loop "uptime"*
       printed in your own VGA loop first.
 - [ ] **H2. Compare against C and Rust** (~1.5 hr). Put

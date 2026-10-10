@@ -7,22 +7,23 @@
 
 <div class="s9-sec"><span class="n">01</span> · 🖥️ OS Development paths</div>
 <div class="s9-grid">
-  <a class="s9-card blue" href="zero-to-kernel-c.md"><span class="ico">🇨</span><span class="ttl">Zero to Kernel in C</span><span class="dsc">Basics → build a real kernel in C.</span><span class="meta">12 steps · Beginner → Hard</span><span class="arrow">→</span></a>
-  <a class="s9-card amber" href="rust-os-dev.md"><span class="ico">🦀</span><span class="ttl">Rust OS Dev</span><span class="dsc">Basics → a modern OS in Rust.</span><span class="meta">12 steps · Beginner → Advanced</span><span class="arrow">→</span></a>
-  <a class="s9-card green" href="cpp-kernel-track.md"><span class="ico">➿</span><span class="ttl">C++ Kernel Track</span><span class="dsc">C++ → a kernel in C++.</span><span class="meta">10 steps · Intermediate → Hard</span><span class="arrow">→</span></a>
-  <a class="s9-card red" href="go-os-dev.md"><span class="ico">🐹</span><span class="ttl">Go OS Dev</span><span class="dsc">Go → unikernels / systems Go.</span><span class="meta">8 steps · Beginner → Intermediate</span><span class="arrow">→</span></a>
-  <a class="s9-card purple" href="csharp-cosmos-track.md"><span class="ico">#️⃣</span><span class="ttl">C# / Cosmos Track</span><span class="dsc">C# → a kernel with Cosmos.</span><span class="meta">8 steps · Intermediate</span><span class="arrow">→</span></a>
-  <a class="s9-card" href="systems-architecture.md"><span class="ico">⚙️</span><span class="ttl">Systems Architecture</span><span class="dsc">CPU, memory, hardware deep dive.</span><span class="meta">12 steps · Intermediate → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card blue" href="zero-to-kernel-c/"><span class="ico">🇨</span><span class="ttl">Zero to Kernel in C</span><span class="dsc">Basics → build a real kernel in C.</span><span class="meta">12 steps · Beginner → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card amber" href="rust-os-dev/"><span class="ico">🦀</span><span class="ttl">Rust OS Dev</span><span class="dsc">Basics → a modern OS in Rust.</span><span class="meta">12 steps · Beginner → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card green" href="cpp-kernel-track/"><span class="ico">➿</span><span class="ttl">C++ Kernel Track</span><span class="dsc">C++ → a kernel in C++.</span><span class="meta">10 steps · Intermediate → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card red" href="go-os-dev/"><span class="ico">🐹</span><span class="ttl">Go OS Dev</span><span class="dsc">Go → unikernels / systems Go.</span><span class="meta">8 steps · Beginner → Intermediate</span><span class="arrow">→</span></a>
+  <a class="s9-card purple" href="csharp-cosmos-track/"><span class="ico">#️⃣</span><span class="ttl">C# / Cosmos Track</span><span class="dsc">C# → a kernel with Cosmos.</span><span class="meta">8 steps · Intermediate</span><span class="arrow">→</span></a>
+  <a class="s9-card" href="systems-architecture/"><span class="ico">⚙️</span><span class="ttl">Systems Architecture</span><span class="dsc">CPU, memory, hardware deep dive.</span><span class="meta">12 steps · Intermediate → Advanced</span><span class="arrow">→</span></a>
 </div>
 
 <div class="s9-sec"><span class="n">02</span> · ⚡ Electronics &amp; Microcontrollers paths</div>
+<p style="color:#8b95a7;font-size:.9rem">These tracks live on the <b>Electronics hub</b> (<code>elecdocs.sektor9.dev</code>) — same style, same sektor9 look.</p>
 <div class="s9-grid">
-  <a class="s9-card blue" href="zero-to-pcb.md"><span class="ico">🔌</span><span class="ttl">Electronics Zero to PCB</span><span class="dsc">Basics → design a real PCB.</span><span class="meta">12 steps · Beginner → Hard</span><span class="arrow">→</span></a>
-  <a class="s9-card green" href="arduino-bare-metal.md"><span class="ico">🛠️</span><span class="ttl">Arduino to Bare-Metal</span><span class="dsc">Arduino → AVR register-level C.</span><span class="meta">10 steps · Beginner → Hard</span><span class="arrow">→</span></a>
-  <a class="s9-card amber" href="esp32-iot.md"><span class="ico">📡</span><span class="ttl">ESP32 / IoT Mastery</span><span class="dsc">Basics → advanced IoT.</span><span class="meta">12 steps · Beginner → Advanced</span><span class="arrow">→</span></a>
-  <a class="s9-card red" href="embedded-c-rust.md"><span class="ico">⚙️</span><span class="ttl">Embedded C &amp; Rust</span><span class="dsc">C → embedded Rust.</span><span class="meta">10 steps · Intermediate → Hard</span><span class="arrow">→</span></a>
-  <a class="s9-card purple" href="rtos-engineer.md"><span class="ico">⏱️</span><span class="ttl">RTOS Engineer</span><span class="dsc">Real-time systems.</span><span class="meta">8 steps · Intermediate → Advanced</span><span class="arrow">→</span></a>
-  <a class="s9-card" href="circuit-design-test.md"><span class="ico">🧪</span><span class="ttl">Circuit Design &amp; Test</span><span class="dsc">Electronics lab skills.</span><span class="meta">8 steps · Beginner → Intermediate</span><span class="arrow">→</span></a>
+  <a class="s9-card blue" href="https://elecdocs.sektor9.dev/learning-paths/zero-to-pcb/"><span class="ico">🔌</span><span class="ttl">Electronics Zero to PCB</span><span class="dsc">Basics → design a real PCB.</span><span class="meta">12 steps · Beginner → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card green" href="https://elecdocs.sektor9.dev/learning-paths/arduino-bare-metal/"><span class="ico">🛠️</span><span class="ttl">Arduino to Bare-Metal</span><span class="dsc">Arduino → AVR register-level C.</span><span class="meta">10 steps · Beginner → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card amber" href="https://elecdocs.sektor9.dev/learning-paths/esp32-iot/"><span class="ico">📡</span><span class="ttl">ESP32 / IoT Mastery</span><span class="dsc">Basics → advanced IoT.</span><span class="meta">12 steps · Beginner → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card red" href="https://elecdocs.sektor9.dev/learning-paths/embedded-c-rust/"><span class="ico">⚙️</span><span class="ttl">Embedded C &amp; Rust</span><span class="dsc">C → embedded Rust.</span><span class="meta">10 steps · Intermediate → Hard</span><span class="arrow">→</span></a>
+  <a class="s9-card purple" href="https://elecdocs.sektor9.dev/learning-paths/rtos-engineer/"><span class="ico">⏱️</span><span class="ttl">RTOS Engineer</span><span class="dsc">Real-time systems.</span><span class="meta">8 steps · Intermediate → Advanced</span><span class="arrow">→</span></a>
+  <a class="s9-card" href="https://elecdocs.sektor9.dev/learning-paths/circuit-design-test/"><span class="ico">🧪</span><span class="ttl">Circuit Design &amp; Test</span><span class="dsc">Electronics lab skills.</span><span class="meta">8 steps · Beginner → Intermediate</span><span class="arrow">→</span></a>
 </div>
 
 <div class="s9-sec"><span class="n">03</span> · Difficulty badges</div>

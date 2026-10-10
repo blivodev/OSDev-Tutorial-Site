@@ -3,7 +3,7 @@
 *Original content written for OSDev_Learning_Hub.*
 
 ## In one sentence
-**[Interrupts](../../GLOSSARY/interrupt.md "A hardware signal that makes the CPU run a registered handler")** are the hardware's way of yelling "something happened!" at the CPU, and the **Interrupt Descriptor Table ([IDT](../../GLOSSARY/idt.md "The kernel's table of where each interrupt handler lives"))** is the kernel's phonebook for where to jump in response.
+**[Interrupts](/GLOSSARY/interrupt/ "A hardware signal that makes the CPU run a registered handler")** are the hardware's way of yelling "something happened!" at the CPU, and the **Interrupt Descriptor Table ([IDT](/GLOSSARY/idt/ "The kernel's table of where each interrupt handler lives"))** is the kernel's phonebook for where to jump in response.
 
 ## The big idea
 
@@ -31,8 +31,8 @@ The same flow from hardware all the way to your handler:
 ## The pieces you set up
 
 1. **The IDT** — an array of descriptors telling the CPU where each handler lives.
-2. **An [ISR](../../GLOSSARY/isr.md "The handler function run for a specific interrupt number") handler** — that does the actual work for a given interrupt number.
-3. **The [PIC / APIC](../../GLOSSARY/pic-apic.md "Chips that route hardware interrupts (timer, keyboard) to the CPU")** — the chip that routes hardware interrupts to the CPU.
+2. **An [ISR](/GLOSSARY/isr/ "The handler function run for a specific interrupt number") handler** — that does the actual work for a given interrupt number.
+3. **The [PIC / APIC](/GLOSSARY/pic-apic/ "Chips that route hardware interrupts (timer, keyboard) to the CPU")** — the chip that routes hardware interrupts to the CPU.
 4. **`sti` / `cli`** — enable/disable interrupts.
 
 Writing this by hand in assembly + C/Rust is a milestone (the Phil Opp series and os01 both dedicate chapters to it). But *understanding* it is what matters for a beginner.
@@ -69,7 +69,7 @@ __asm__ volatile("sti");   // enable interrupts
 |-------|-------------|---------|
 | 0–31 | **CPU exceptions** | #PF page fault (14), #GP general protection (13) |
 | 32–47 | **Hardware IRQs** (after PIC remap) | timer (32), keyboard (33) |
-| 48–255 | Software / your custom | [syscalls](../../GLOSSARY/syscall.md "The way user programs ask the kernel for services"), custom events |
+| 48–255 | Software / your custom | [syscalls](/GLOSSARY/syscall/ "The way user programs ask the kernel for services"), custom events |
 
 > **Next:** [`04-vga-text-mode.md`](04-vga-text-mode.md).
 
@@ -121,7 +121,7 @@ The bug that trips up most first-time IDT builders: **the PIC must be remapped**
 
 ## Deep dive: the IDT entry — what one slot actually contains
 
-The [IDT](../../GLOSSARY/idt.md "The kernel's table of where each interrupt handler lives") is an array of 256 entries. Each entry is 8 bytes (in 32-bit protected mode) and tells the CPU where that interrupt's handler lives. Understanding a single entry busts the "table of pointers" myth — it's richer than that.
+The [IDT](/GLOSSARY/idt/ "The kernel's table of where each interrupt handler lives") is an array of 256 entries. Each entry is 8 bytes (in 32-bit protected mode) and tells the CPU where that interrupt's handler lives. Understanding a single entry busts the "table of pointers" myth — it's richer than that.
 
 ```c
 // idt.h — one 32-bit IDT entry (8 bytes, packed)

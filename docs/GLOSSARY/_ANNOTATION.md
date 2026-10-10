@@ -6,7 +6,7 @@ hover tooltip that takes the reader to its glossary page.
 ## The exact link format (use this everywhere)
 
 ```
-[Term](GLOSSARY/slug.md "short hover tooltip")
+[Term](/GLOSSARY/slug/ "short hover tooltip")
 ```
 
 - The `"..."` after the path is the **tooltip** shown on hover (GitHub/Gitea render Markdown
@@ -37,7 +37,7 @@ Every doc and its prefix is listed in the dispatch message for each annotation j
 3. **Do NOT edit headings** (lines starting with `#`).
 4. **Do NOT alter or remove** any existing Markdown structure, tables, or content. You are
    ONLY wrapping terms. Preserve every character of the surrounding sentence. Change
-   `VGA text mode` → `[VGA text mode](prefix/vga-text-mode.md "tooltip")` and nothing else.
+   `VGA text mode` → `[VGA text mode](prefix/vga-text-mode/ "tooltip")` and nothing else.
 5. **Tooltips:** use the exact tooltip from the glossary `_TERMS.md`. Keep them short
    (5-15 words). Do not paraphrase into something long.
 6. **Don't over-link.** Link a term on its FIRST meaningful occurrence in a document, and
