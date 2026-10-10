@@ -6,16 +6,16 @@ documented code in `Example_OS_Project/csharp/`.*
 > **Read last, after Chapters 01–04 (C, Rust, C++, Go).** Every prior language
 > compiled to *native machine code* and handed you the raw `0xB8000`
 > framebuffer. C# is the **edge case** that completes the lesson: it compiles
-> to [managed IL](../../GLOSSARY/managed-il.md "The intermediate language C# compiles to, which needs a runtime") and *requires* a runtime (GC, JIT, base class
+> to [managed IL](/GLOSSARY/managed-il/ "The intermediate language C# compiles to, which needs a runtime") and *requires* a runtime (GC, JIT, base class
 > library). There is **no practical hand-rolled bare-metal path for a
-> beginner** — so you use the [Cosmos OS kit](../../GLOSSARY/cosmos.md "An open-source C# operating-system kit") as the runtime and bootloader, and write
+> beginner** — so you use the [Cosmos OS kit](/GLOSSARY/cosmos/ "An open-source C# operating-system kit") as the runtime and bootloader, and write
 > your OS logic in familiar C#. That trade-off is the whole point.
 
 ---
 
 ## What you'll have at the end
 
-A C# [kernel](../../GLOSSARY/kernel.md "The core program that owns the machine and manages hardware"), built with the **Cosmos OS kit**, that boots and drops you into
+A C# [kernel](/GLOSSARY/kernel/ "The core program that owns the machine and manages hardware"), built with the **Cosmos OS kit**, that boots and drops you into
 an interactive prompt:
 ```
 Cosmos booted successfully. Let's go!
@@ -26,10 +26,10 @@ Welcome to your very own operating system (C# edition).
 Before anything else, the honest headline this chapter teaches: **C# has no
 practical hand-rolled bare-metal path for a beginner.** Every language so far
 (C, C++, Rust, Go) compiles to *native machine code* and hands you the raw
-`0xB8000` framebuffer. C# compiles to **[managed IL](../../GLOSSARY/managed-il.md "The intermediate language C# compiles to, which needs a runtime")** and needs a runtime —
+`0xB8000` framebuffer. C# compiles to **[managed IL](/GLOSSARY/managed-il/ "The intermediate language C# compiles to, which needs a runtime")** and needs a runtime —
 garbage collector, JIT, base class library — and bootstrapping that runtime on
 bare metal is a huge project. So, per the OSDev_Learning_Hub plan, the C#
-chapter is the **edge case**: you use the **[Cosmos OS kit](../../GLOSSARY/cosmos.md "An open-source C# operating-system kit")** as the framework,
+chapter is the **edge case**: you use the **[Cosmos OS kit](/GLOSSARY/cosmos/ "An open-source C# operating-system kit")** as the framework,
 and write your OS logic in familiar C#.
 
 ---
@@ -65,7 +65,7 @@ that way. You bring a runtime instead.
 
 C# compiles to **Common Intermediate Language (IL)**, then the **Common
 Language Runtime (CLR)** turns that IL into native code (via JIT, or AOT with
-[NativeAOT](../../GLOSSARY/nativeaot.md ".NET's ahead-of-time compiler that turns IL into native code")). The CLR is a full virtual machine:
+[NativeAOT](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code")). The CLR is a full virtual machine:
 
 ```text
    C# source ──compile──▶ IL (managed/MSIL binary)
@@ -164,7 +164,7 @@ public class Kernel : Cosmos.System.Kernel
 | Compiles to            | native machine code| native machine code | native (via gccgo) | **managed IL**          |
 | Needs a runtime?       | no (`-ffreestanding`) | no (`no_std`)    | minimal (stubs)       | **yes — GC + BCL**      |
 | Can poke 0xB8000 directly? | yes            | yes (`unsafe`)    | yes (`unsafe`)        | not as a beginner       |
-| Realistic bare-metal path | full control    | full control      | stub + gccgo          | **needs [Cosmos](../../GLOSSARY/cosmos.md "An open-source C# operating-system kit")/[NativeAOT](../../GLOSSARY/nativeaot.md ".NET's ahead-of-time compiler that turns IL into native code")** |
+| Realistic bare-metal path | full control    | full control      | stub + gccgo          | **needs [Cosmos](/GLOSSARY/cosmos/ "An open-source C# operating-system kit")/[NativeAOT](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code")** |
 
 The column that matters is *"Needs a runtime?"*. C++ you met: exceptions and
 RTTI needed a runtime, so you compiled them out with `-fno-exceptions
@@ -178,7 +178,7 @@ and Cosmos *is* that runtime, compiled ahead-of-time to native code.
 
 The beginner-friendly C# path, then, is: **let Cosmos do the bootloader and
 the runtime; write your OS logic in familiar C#.** `ExampleOS.csproj` even
-notes that Cosmos compiles via [NativeAOT](../../GLOSSARY/nativeaot.md ".NET's ahead-of-time compiler that turns IL into native code") / [IL2CPU](../../GLOSSARY/il2cpu.md "Cosmos's original IL-to-x86 compiler") — it turns your IL into a
+notes that Cosmos compiles via [NativeAOT](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code") / [IL2CPU](/GLOSSARY/il2cpu/ "Cosmos's original IL-to-x86 compiler") — it turns your IL into a
 bootable, native OS while you keep writing `Console.*`.
 
 ## Step 2 — `Kernel.cs`: a Cosmos kernel, not a hand-rolled one
@@ -268,7 +268,7 @@ each one views raw memory:
   `unsafe` keyword) but is *not* how you work with this language — Cosmos
   gives you `Console` abstractions instead.
 
-That progression *is* the lesson: as the language manages more for you ([GC](../../GLOSSARY/garbage-collection.md "Automatic memory reclamation used by managed runtimes"),
+That progression *is* the lesson: as the language manages more for you ([GC](/GLOSSARY/garbage-collection/ "Automatic memory reclamation used by managed runtimes"),
 safety, runtime), direct hardware I/O moves further from your reach — until,
 with C#, it moves behind a framework.
 
@@ -326,7 +326,7 @@ If you've done the C chapter, you know the traditional path is `Console` →
 some driver → `0xB8000`. Cosmos collapses that: `Console.WriteLine` is
 *patched* by the build to talk directly to the emulated VGA/console hardware.
 That one line hides the entire VGA driver you wrote by hand in Chapter 01. See
-the [memory-mapped-io](../../GLOSSARY/memory-mapped-io.md "Writing to a hardware register through a normal memory address") concept for what's underneath.
+the [memory-mapped-io](/GLOSSARY/memory-mapped-io/ "Writing to a hardware register through a normal memory address") concept for what's underneath.
 
 ### C.3 — Exercise: extend the command loop
 
@@ -442,8 +442,8 @@ glossary and the `.csproj` comments:
 
 Both achieve the same goal: turn your C# (which is IL in the `.dll`) into a
 **bootable native kernel**, so no JIT is needed at runtime. Look up
-[`il2cpu`](../../GLOSSARY/il2cpu.md "Cosmos's original IL-to-x86 compiler") and
-[`nativeaot`](../../GLOSSARY/nativeaot.md ".NET's ahead-of-time compiler that turns IL into native code") for the details. The takeaway: whether it's the
+[`il2cpu`](/GLOSSARY/il2cpu/ "Cosmos's original IL-to-x86 compiler") and
+[`nativeaot`](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code") for the details. The takeaway: whether it's the
 Cosmos homegrown compiler or the official .NET one, **your C# becomes native
 machine code** before the bootloader ever runs — that's the only reason a C#
 kernel can boot at all.
@@ -525,8 +525,8 @@ hardware.
 > **Bridge to OS concepts:** C# is the clearest object lesson in **what a**
 > runtime actually is and why it's hard** — the exact gap C++ avoided with
 > `-fno-exceptions -fno-rtti`, Go papered over with stubs, and C never had
-> (concepts/02 **[memory management](../../GLOSSARY/memory-management.md "How a kernel tracks used and free RAM and hands it out safely")**, concepts/01 **bootloaders and
-> [Multiboot](../../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")**). Where the other languages reached the **[VGA framebuffer](../../GLOSSARY/vga-framebuffer.md "The memory at 0xB8000 where screen text is written")**
+> (concepts/02 **[memory management](/GLOSSARY/memory-management/ "How a kernel tracks used and free RAM and hands it out safely")**, concepts/01 **bootloaders and
+> [Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")**). Where the other languages reached the **[VGA framebuffer](/GLOSSARY/vga-framebuffer/ "The memory at 0xB8000 where screen text is written")**
 > directly (concepts/04), C# delegates that hardware I/O to a framework —
 > which is exactly why, when you *must* control hardware bit-by-bit, you reach
 > for C, and when you just want a working OS quickly, C# + Cosmos wins.
@@ -537,16 +537,16 @@ hardware.
 
 ### The ten terms this chapter leans on
 
-- [`cosmos`](../../GLOSSARY/cosmos.md "An open-source C# operating-system kit") — the C# OS construction kit you use instead of a hand-rolled bootloader.
-- [`managed-il`](../../GLOSSARY/managed-il.md "The intermediate language C# compiles to, which needs a runtime") — what C# compiles to before the CLR turns it native.
-- [`il2cpu`](../../GLOSSARY/il2cpu.md "Cosmos's original IL-to-x86 compiler") — Cosmos's original IL-to-native compiler.
-- [`nativeaot`](../../GLOSSARY/nativeaot.md ".NET's ahead-of-time compiler that turns IL into native code") — the modern .NET AOT compiler Cosmos can use.
-- [`garbage-collection`](../../GLOSSARY/garbage-collection.md "Automatic memory reclamation used by managed runtimes") — the GC that owns your C# objects' memory.
-- [`kernel`](../../GLOSSARY/kernel.md "The core program that owns the machine and manages hardware") — what your `Kernel.cs` subclasses into.
-- [`vga-framebuffer`](../../GLOSSARY/vga-framebuffer.md "The memory at 0xB8000 where screen text is written") — what C poked directly; C# reaches it via `Console`.
-- [`memory-mapped-io`](../../GLOSSARY/memory-mapped-io.md "Writing to a hardware register through a normal memory address") — how the VGA buffer is actually addressed.
-- [`multiboot`](../../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") — the boot protocol C wrote by hand; Cosmos uses Limine.
-- [`limine`](../../GLOSSARY/limine.md "A modern bootloader used by Cosmos and other kernels") — the bootloader Cosmos uses in the current generation.
+- [`cosmos`](/GLOSSARY/cosmos/ "An open-source C# operating-system kit") — the C# OS construction kit you use instead of a hand-rolled bootloader.
+- [`managed-il`](/GLOSSARY/managed-il/ "The intermediate language C# compiles to, which needs a runtime") — what C# compiles to before the CLR turns it native.
+- [`il2cpu`](/GLOSSARY/il2cpu/ "Cosmos's original IL-to-x86 compiler") — Cosmos's original IL-to-native compiler.
+- [`nativeaot`](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code") — the modern .NET AOT compiler Cosmos can use.
+- [`garbage-collection`](/GLOSSARY/garbage-collection/ "Automatic memory reclamation used by managed runtimes") — the GC that owns your C# objects' memory.
+- [`kernel`](/GLOSSARY/kernel/ "The core program that owns the machine and manages hardware") — what your `Kernel.cs` subclasses into.
+- [`vga-framebuffer`](/GLOSSARY/vga-framebuffer/ "The memory at 0xB8000 where screen text is written") — what C poked directly; C# reaches it via `Console`.
+- [`memory-mapped-io`](/GLOSSARY/memory-mapped-io/ "Writing to a hardware register through a normal memory address") — how the VGA buffer is actually addressed.
+- [`multiboot`](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") — the boot protocol C wrote by hand; Cosmos uses Limine.
+- [`limine`](/GLOSSARY/limine/ "A modern bootloader used by Cosmos and other kernels") — the bootloader Cosmos uses in the current generation.
 
 ### FAQ
 
@@ -611,8 +611,8 @@ runtime you're co-opting. All are real on YouTube.
 
 > **Next-step map:** you've now seen every language track. The natural
 > conclusion of this hub is to *build* — take the C kernel you understand
-> innermost and grow it: an [IDT](../../GLOSSARY/idt.md "The table that tells the CPU where each interrupt handler lives") + interrupts (concepts/03), a
-> [frame allocator](../../GLOSSARY/frame-allocator.md "Kernel code that tracks and hands out physical memory frames") (concepts/02), then [paging](../../GLOSSARY/paging.md "The memory-mapping mechanism that gives each process virtual memory").
+> innermost and grow it: an [IDT](/GLOSSARY/idt/ "The table that tells the CPU where each interrupt handler lives") + interrupts (concepts/03), a
+> [frame allocator](/GLOSSARY/frame-allocator/ "Kernel code that tracks and hands out physical memory frames") (concepts/02), then [paging](/GLOSSARY/paging/ "The memory-mapping mechanism that gives each process virtual memory").
 > And if you want a *practical* "OS in C#" side project, Cosmos is your
 > playground — just remember what it's abstracting away from you.
 

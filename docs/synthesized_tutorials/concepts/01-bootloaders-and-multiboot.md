@@ -3,7 +3,7 @@
 *Original content written for OSDev_Learning_Hub.*
 
 ## In one sentence
-A **[bootloader](../../GLOSSARY/bootloader.md "A small program that loads your kernel into memory and jumps to it")** is a tiny program that turns the raw hardware over to your kernel; the **[Multiboot protocol](../../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")** is the handshake that lets any standard bootloader load *any* kernel that follows the rules.
+A **[bootloader](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it")** is a tiny program that turns the raw hardware over to your kernel; the **[Multiboot protocol](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")** is the handshake that lets any standard bootloader load *any* kernel that follows the rules.
 
 ```mermaid
 sequenceDiagram
@@ -45,10 +45,10 @@ align 4
     dd -(0x1BADB002 + 0x03)   ; checksum
 ```
 
-Why does the `flags` bit for a **memory map** matter? Because when your kernel runs, it has no idea how much RAM exists. Multiboot can hand you a memory map so you can write a [memory manager](../../GLOSSARY/memory-management.md "How a kernel tracks used and free RAM and hands it out safely") (next concept).
+Why does the `flags` bit for a **memory map** matter? Because when your kernel runs, it has no idea how much RAM exists. Multiboot can hand you a memory map so you can write a [memory manager](/GLOSSARY/memory-management/ "How a kernel tracks used and free RAM and hands it out safely") (next concept).
 
 ## Why "1 MiB"?
-Below 1 MiB lives the "low memory" area full of things the bootloader and [BIOS](../../GLOSSARY/bios.md "The motherboard firmware that starts the machine and finds a bootloader") use. Kernels are conventionally loaded **at or above 1 MiB** (`0x100000`) to avoid stomping on that region. Your linker script sets `ENTRY(_start)` and `. = 1M;` to match.
+Below 1 MiB lives the "low memory" area full of things the bootloader and [BIOS](/GLOSSARY/bios/ "The motherboard firmware that starts the machine and finds a bootloader") use. Kernels are conventionally loaded **at or above 1 MiB** (`0x100000`) to avoid stomping on that region. Your linker script sets `ENTRY(_start)` and `. = 1M;` to match.
 
 ## Bootloader vs your kernel's job
 ```mermaid
@@ -66,7 +66,7 @@ flowchart LR
     end
 ```
 
-You are **not** writing a bootloader — you're writing the kernel. That's an enormous head start. Use [GRUB](../../GLOSSARY/grub.md "The free GNU bootloader that loads Multiboot kernels") (C/C++/Go) or the Rust `bootloader` crate and focus on the interesting part: the OS itself.
+You are **not** writing a bootloader — you're writing the kernel. That's an enormous head start. Use [GRUB](/GLOSSARY/grub/ "The free GNU bootloader that loads Multiboot kernels") (C/C++/Go) or the Rust `bootloader` crate and focus on the interesting part: the OS itself.
 
 ## The three Multiboot generations you'll meet
 | Name | Magic | Notes |
@@ -143,7 +143,7 @@ align 4
 | bit 1 | `0x2` | **MEMINFO** — "give me a memory map" (essential for a memory manager) |
 | bit 2 | `0x4` | **VIDEO** — "set a video mode for me" (rarely used in text-mode starters) |
 
-The classic `0x03` requests both ALIGN and MEMINFO. If you forget MEMINFO, the bootloader won't hand you the memory map — and your future [memory manager](../../GLOSSARY/memory-management.md "How a kernel tracks used and free RAM and hands it out safely") will have no idea how much RAM exists.
+The classic `0x03` requests both ALIGN and MEMINFO. If you forget MEMINFO, the bootloader won't hand you the memory map — and your future [memory manager](/GLOSSARY/memory-management/ "How a kernel tracks used and free RAM and hands it out safely") will have no idea how much RAM exists.
 
 **Checksum.** The loader validates the header by computing `magic + flags + checksum` and requiring the result to be **zero** (wrapped to 32 bits). That's why the third field is literally `-(magic + flags)`. It's the loader's "did you even read the spec?" handshake.
 

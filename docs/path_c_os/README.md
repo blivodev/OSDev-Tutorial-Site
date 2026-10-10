@@ -2,15 +2,15 @@
 
 > **The reference language track of this hub.** Every other track (C++, Rust, Go, C#)
 > is measured against C because C is the language the OS-dev world was *built on*:
-> the VGA framebuffer, the [Multiboot](../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") header,
-> the [linker](../GLOSSARY/linker.md "The tool that merges object files into one image at a chosen address") script, and `-ffreestanding`
+> the VGA framebuffer, the [Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") header,
+> the [linker](/GLOSSARY/linker/ "The tool that merges object files into one image at a chosen address") script, and `-ffreestanding`
 > are all things you can understand *perfectly* in C before you see how each other language
 > wraps them in its own safety rules or frameworks. Master this path and the rest of the hub
 > becomes a study of *differences* rather than of brand-new ideas.
 
 This page deep-expands the C track: it teaches you the *small, focused slice* of C a kernel
 actually needs, shows you how memory really works when there is no OS underneath, then walks
-you through booting a real "Hello World!" kernel in [QEMU](../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing").
+you through booting a real "Hello World!" kernel in [QEMU](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing").
 If you get stuck, the fully-commented reference lives in
 [`Example_OS_Project/c/`](../Example_OS_Project/c/).
 
@@ -23,16 +23,16 @@ If you get stuck, the fully-commented reference lives in
 - **License:** Free (GitHub-distributed book)
 - **Local copy:** [`Operating_Systems_From_0_to_1.pdf`](Operating_Systems_From_0_to_1.pdf)
 - **Why chosen:** The single best free book that bootstraps a self-learner from *assembler + C* all the way to *linking/loading a bare-metal x86_64 kernel* in pure C — no standard library, no runtime. Famous, well-regarded (13k+ GitHub stars), text-heavy with diagrams.
-- **What it teaches:** Linux dev environment + low-level tools, [x86](../GLOSSARY/x86.md "The CPU architecture family this hub targets") assembly in depth, [ELF](../GLOSSARY/elf.md "The executable format that lets a bootloader load your kernel"), program structure, debugging bare metal with **GDB + [QEMU](../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing")**, linking/loading on x86_64 in pure C.
+- **What it teaches:** Linux dev environment + low-level tools, [x86](/GLOSSARY/x86/ "The CPU architecture family this hub targets") assembly in depth, [ELF](/GLOSSARY/elf/ "The executable format that lets a bootloader load your kernel"), program structure, debugging bare metal with **GDB + [QEMU](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing")**, linking/loading on x86_64 in pure C.
 
 ### 2. OSDev Wiki — Bare Bones (C)
 - **Where:** https://wiki.osdev.org/Bare_Bones
 - **License:** Open wiki (community-reviewed, CC/GFDL-style)
 - **Local copy:** [`Bare_Bones_C.md`](Bare_Bones_C.md)
-- **Why chosen:** The canonical, community-reviewed minimal-kernel tutorial for absolute beginners. 32-bit [x86](../GLOSSARY/x86.md "The CPU architecture family this hub targets") kernel booted by **[GRUB](../GLOSSARY/grub.md "A free, standard bootloader (GNU Grand Unified Bootloader)") + [Multiboot](../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")**, with the standard VGA text-mode driver. Uses GCC `-ffreestanding`.
+- **Why chosen:** The canonical, community-reviewed minimal-kernel tutorial for absolute beginners. 32-bit [x86](/GLOSSARY/x86/ "The CPU architecture family this hub targets") kernel booted by **[GRUB](/GLOSSARY/grub/ "A free, standard bootloader (GNU Grand Unified Bootloader)") + [Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002")**, with the standard VGA text-mode driver. Uses GCC `-ffreestanding`.
 
 ## What you'll build in this path
-A minimal kernel that prints **"Hello World!"** to the [VGA text framebuffer](../GLOSSARY/vga-framebuffer.md "The block of memory at 0xB8000 where the screen text lives") at `0xB8000`, booted by [GRUB](../GLOSSARY/grub.md "A free, standard bootloader (GNU Grand Unified Bootloader)")/[Multiboot](../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002").
+A minimal kernel that prints **"Hello World!"** to the [VGA text framebuffer](/GLOSSARY/vga-framebuffer/ "The block of memory at 0xB8000 where the screen text lives") at `0xB8000`, booted by [GRUB](/GLOSSARY/grub/ "A free, standard bootloader (GNU Grand Unified Bootloader)")/[Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002").
 
 ## Supporting material already in this hub
 - Fully-commented minimal implementation → [`Example_OS_Project/c/`](../Example_OS_Project/c/)
@@ -63,7 +63,7 @@ is the **opposite**: it **is** the OS. There is no `libc` beneath it, no `printf
 no runtime that calls `main`. OS-dev calls this **freestanding** C — the whole language
 *minus* the standard library.
 
-[`freestanding`](../GLOSSARY/freestanding.md "Code compiled assuming no OS or standard library exists") is a real phrase from the C standard. The C standard only requires a
+[`freestanding`](/GLOSSARY/freestanding/ "Code compiled assuming no OS or standard library exists") is a real phrase from the C standard. The C standard only requires a
 freestanding implementation to provide a handful of headers (`<float.h>`, `<limits.h>`,
 `<stdarg.h>`, `<stddef.h>`, `<stdint.h>`, …) and leaves everything else to you. Our kernel
 uses **none of the standard library at all** — it doesn't even `#include <stdio.h>`. It talks
@@ -117,7 +117,7 @@ void kernel_main(void) {
 }
 ```
 
-Later when you add [interrupts](../GLOSSARY/interrupt.md "A hardware signal that makes the CPU run a registered handler") and a scheduler, this "never returns" rule becomes
+Later when you add [interrupts](/GLOSSARY/interrupt/ "A hardware signal that makes the CPU run a registered handler") and a scheduler, this "never returns" rule becomes
 the seed of the whole OS: the kernel *is* the thing that keeps running and dispatching work.
 
 ---
@@ -153,13 +153,13 @@ VGA_MEMORY[0] = 0x0F48;   /* cell 0 = char 'H' (0x48) with color 0x0F */
 In application C, the OS gives you a clean fiction: a stack, a heap you call `malloc` on,
 and a process that the OS cleaned up before you ever ran. A kernel owns *raw hardware memory*:
 
-- The **[stack](../GLOSSARY/entry-point.md "The symbol (usually _start) the bootloader jumps to when your kernel starts")** is a region you carve out in assembly (boot.s reserves 16 KiB) because the CPU
+- The **[stack](/GLOSSARY/entry-point/ "The symbol (usually _start) the bootloader jumps to when your kernel starts")** is a region you carve out in assembly (boot.s reserves 16 KiB) because the CPU
   has no usable stack at power-on and C cannot declare "my stack is here" — the stack-pointer
   register is only settable from assembly.
 - There is **no heap from the OS**. When a kernel needs dynamic memory, *it* becomes the
-  allocator ([memory management](../GLOSSARY/memory-management.md "How a kernel tracks used and free RAM and hands it out safely")). Later chapters of this
-  hub build a [frame allocator](../GLOSSARY/frame-allocator.md "The simplest memory manager that tracks which 4 KiB physical pages are free") and a [heap allocator](../GLOSSARY/heap-allocation.md "Dynamically allocating memory at runtime, which a kernel must implement itself").
-- **[Physical vs. virtual memory](../GLOSSARY/physical-virtual-memory.md "Real RAM addresses vs the addresses your code sees after paging")** only becomes a distinction once you enable [paging](../GLOSSARY/paging.md "The CPU feature that translates virtual addresses to physical RAM via page tables"); Multiboot v1 boots you in 32-bit [protected mode](../GLOSSARY/protected-mode.md "The 32-bit CPU mode Multiboot v1 loads kernels into") with paging *disabled*, so for now the address you write *is* physical RAM.
+  allocator ([memory management](/GLOSSARY/memory-management/ "How a kernel tracks used and free RAM and hands it out safely")). Later chapters of this
+  hub build a [frame allocator](/GLOSSARY/frame-allocator/ "The simplest memory manager that tracks which 4 KiB physical pages are free") and a [heap allocator](/GLOSSARY/heap-allocation/ "Dynamically allocating memory at runtime, which a kernel must implement itself").
+- **[Physical vs. virtual memory](/GLOSSARY/physical-virtual-memory/ "Real RAM addresses vs the addresses your code sees after paging")** only becomes a distinction once you enable [paging](/GLOSSARY/paging/ "The CPU feature that translates virtual addresses to physical RAM via page tables"); Multiboot v1 boots you in 32-bit [protected mode](/GLOSSARY/protected-mode/ "The 32-bit CPU mode Multiboot v1 loads kernels into") with paging *disabled*, so for now the address you write *is* physical RAM.
 
 ### 2.3 Reading memory back (a superpower)
 
@@ -233,9 +233,9 @@ programming: **hex** and **endianness**.
   the color.
 
 This mental model — "a number stored in memory has a byte order, and I choose the width"
-— is the same one you'll need for [GDT](../GLOSSARY/gdt.md "A table describing memory segments the CPU uses in protected mode") and
-[IDT](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives") structures, port I/O, and
-[memory-mapped I/O](../GLOSSARY/memory-mapped-io.md "Hardware that is controlled by writing to regular memory addresses") later.
+— is the same one you'll need for [GDT](/GLOSSARY/gdt/ "A table describing memory segments the CPU uses in protected mode") and
+[IDT](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives") structures, port I/O, and
+[memory-mapped I/O](/GLOSSARY/memory-mapped-io/ "Hardware that is controlled by writing to regular memory addresses") later.
 
 ```c
 /* Visualizing the 2-byte VGA cell at 0xB8000 as a little-endian uint16. */
@@ -276,8 +276,8 @@ the screen → `linker.ld` decides where it all sits → `Makefile` drives the t
 ### 3.1 `boot.s` — the Multiboot header and the stack
 
 Every bare-metal C kernel needs a tiny assembly file to (a) declare the
-[Multiboot](../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") header so a
-[bootloader](../GLOSSARY/bootloader.md "A small program that loads your kernel into memory and jumps to it") recognizes it, and (b) give the CPU a stack (it has none when it boots).
+[Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002") header so a
+[bootloader](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it") recognizes it, and (b) give the CPU a stack (it has none when it boots).
 
 ```nasm
 # Declare constants for the multiboot header.
@@ -316,7 +316,7 @@ whole "handshake" that proves "I am a Multiboot kernel, load me."
 
 Why does the CPU need a stack? Because the first C function you call will `push` return
 addresses and local variables. If `esp` is garbage, the first `push` writes to an unknown
-address and the machine [triple-faults](../GLOSSARY/hlt-instruction.md "The CPU instruction that parks the CPU until an interrupt wakes it") (resets). Giving the CPU a
+address and the machine [triple-faults](/GLOSSARY/hlt-instruction/ "The CPU instruction that parks the CPU until an interrupt wakes it") (resets). Giving the CPU a
 well-defined stack region is the assembly file's most important job.
 
 ### 3.2 `kernel.c` — the VGA driver and the entry point
@@ -398,7 +398,7 @@ SECTIONS {
 
 Three things to notice:
 - **`. = 1M;`** — the location counter starts at 1 MiB. This is where
-  [GRUB](../GLOSSARY/grub.md "A free, standard bootloader (GNU Grand Unified Bootloader)") conventionally loads Multiboot kernels; below that address the low memory is
+  [GRUB](/GLOSSARY/grub/ "A free, standard bootloader (GNU Grand Unified Bootloader)") conventionally loads Multiboot kernels; below that address the low memory is
   reserved for BIOS/firmware and hardware.
 - **`*(.multiboot)` first** — the header must be the very first thing in the image or the
   bootloader won't find it.
@@ -492,7 +492,7 @@ exact files in this project.
 |---------|-------|---------------|
 | Bootloaders & Multiboot | [`concepts/01-bootloaders-and-multiboot.md`](../synthesized_tutorials/concepts/01-bootloaders-and-multiboot.md) | what actually loaded your kernel |
 | Memory management | [`concepts/02-memory-management.md`](../synthesized_tutorials/concepts/02-memory-management.md) | the 1 MiB layout, physical vs. virtual |
-| Interrupts & the IDT | [`concepts/03-interrupts-and-the-idt.md`](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md) | replace `for(;;)` with an [IDT](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives") + `hlt` loop |
+| Interrupts & the IDT | [`concepts/03-interrupts-and-the-idt.md`](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md) | replace `for(;;)` with an [IDT](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives") + `hlt` loop |
 | VGA text mode deep-dive | [`concepts/04-vga-text-mode.md`](../synthesized_tutorials/concepts/04-vga-text-mode.md) | colors, cursor, scrolling |
 | The bigger OSDev landscape | [`concepts/05-the-hello-world-of-oses.md`](../synthesized_tutorials/concepts/05-the-hello-world-of-oses.md) | what a real kernel does after Hello World |
 | The C chapter deep-dive | [`synthesized_tutorials/01-c/README.md`](../synthesized_tutorials/01-c/README.md) | a longer, read-along version of this page |
@@ -575,9 +575,9 @@ ideally `make -C Example_OS_Project/c` working end-to-end first.
 **Hard**
 
 - [ ] **H1. Port a concept back in** (~3 hr). Take this hello-world kernel and add one subsystem
-      from the concept chapters: a PIT timer [ISR](../GLOSSARY/isr.md "The handler function run for a specific interrupt number")
+      from the concept chapters: a PIT timer [ISR](/GLOSSARY/isr/ "The handler function run for a specific interrupt number")
       ([concepts/03](../synthesized_tutorials/concepts/03-interrupts-and-the-idt.md)) or a
-      [frame allocator](../GLOSSARY/frame-allocator.md "The simplest memory manager that tracks which 4 KiB physical pages are free")
+      [frame allocator](/GLOSSARY/frame-allocator/ "The simplest memory manager that tracks which 4 KiB physical pages are free")
       ([concepts/02](../synthesized_tutorials/concepts/02-memory-management.md)). This proves the concepts are language-independent.
 - [ ] **H2. Compare against Rust / C++ side-by-side** (~1.5 hr). Put your C kernel source next to
       [`Example_OS_Project/cpp/kernel.c++`](../Example_OS_Project/cpp/kernel.c++) and

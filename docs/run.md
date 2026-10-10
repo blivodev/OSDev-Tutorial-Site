@@ -2,10 +2,10 @@
 
 This page lets you **edit and run a real OS kernel right here in the browser**.
 Change the code, hit **▶ Run**, and the server compiles it and boots it in
-[QEMU](../../GLOSSARY/qemu.md "A free emulator you can boot your kernel in for testing") —
+[QEMU](/GLOSSARY/qemu/ "A free emulator you can boot your kernel in for testing") —
 you'll see your kernel's output below the editor.
 
-> It works exactly like the [IDE](../../GLOSSARY/ide.md "Integrated Development Environment") but without leaving the docs.
+> It works exactly like the [browser IDE](https://ide.sektor9.dev/ "Integrated Development Environment — code-server with the Example OS preloaded") but without leaving the docs.
 > Behind the scenes the same `gcc -m32` + `qemu-system-i386` toolchain runs in a sandbox.
 
 ---

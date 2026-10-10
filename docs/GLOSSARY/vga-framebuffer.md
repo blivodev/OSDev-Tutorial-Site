@@ -48,7 +48,7 @@ The framebuffer concept generalizes: in graphics modes the buffer instead holds 
 - [VGA Text Mode](vga-text-mode.md)
 - [Memory Management](memory-management.md)
 - [Kernel](kernel.md)
-- [Frame Buffer](framebuffer.md)
+- [Frame Buffer](vga-framebuffer.md)
 
 ---
 *Grounded in the OSDev_Learning_Hub tutorials, the OSDev Wiki (free), and standard OS-dev references.*

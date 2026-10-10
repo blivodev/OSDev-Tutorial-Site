@@ -14,7 +14,7 @@ verified code in `Example_OS_Project/rust/`.*
 
 ## What you'll have at the end
 
-A [freestanding](../../GLOSSARY/freestanding.md "Code compiled assuming no OS or standard library exists") Rust [kernel](../../GLOSSARY/kernel.md "The core program that owns the machine and manages hardware") that prints:
+A [freestanding](/GLOSSARY/freestanding/ "Code compiled assuming no OS or standard library exists") Rust [kernel](/GLOSSARY/kernel/ "The core program that owns the machine and manages hardware") that prints:
 ```
 Hello World!
 Welcome to your very own operating system (Rust edition).
@@ -346,7 +346,7 @@ run:  cargo bootimage --target x86_64-unknown-none
       qemu-system-x86_64 -drive format=raw,file=target/x86_64-unknown-none/debug/bootimage-example_os_rust.bin
 ```
 
-1. **`cargo build`** produces the freestanding [ELF](../../GLOSSARY/elf.md "The executable format that lets a bootloader load your kernel") — **verified on stable**
+1. **`cargo build`** produces the freestanding [ELF](/GLOSSARY/elf/ "The executable format that lets a bootloader load your kernel") — **verified on stable**
    Rust. This is your kernel.
 2. **A bootable image** needs more: `cargo bootimage` bundles your ELF with
    the `bootloader` crate into a BIOS-bootable raw disk, and that crate
@@ -548,9 +548,9 @@ qemu-system-x86_64 -drive format=raw,file=target/x86_64-unknown-none/debug/booti
 
 > **Why `cargo bootimage`?** It prepends a small BIOS bootloader to your ELF,
 > then pads and packs the result into the raw-disk format QEMU boots. See
-> [`bootimage`](../../GLOSSARY/bootimage.md "The cargo subcommand that packs your ELF with a bootloader into a bootable disk image") and
-> [`bootloader-crate`](../../GLOSSARY/bootloader-crate.md "Rust's bootloader library that hands control to your kernel").
-> The toolchain is pinned in [`rustup`](../../GLOSSARY/rustup.md "Rust's toolchain installer — how you add the bare-metal target")
+> [`bootimage`](/GLOSSARY/bootimage/ "The cargo subcommand that packs your ELF with a bootloader into a bootable disk image") and
+> [`bootloader-crate`](/GLOSSARY/bootloader-crate/ "Rust's bootloader library that hands control to your kernel").
+> The toolchain is pinned in [`rustup`](/GLOSSARY/rustup/ "Rust's toolchain installer — how you add the bare-metal target")
 > via `rust-toolchain.toml`.
 
 ### Where the `unsafe` really should go (a design hint)
@@ -565,16 +565,16 @@ contains the blast radius of any memory bug.
 
 ### A tiny glossary walk
 
-- [`no_std`](../../GLOSSARY/no_std.md "The crate attribute that drops the standard library") — the crate attribute that removes `std`.
-- [`no_main`](../../GLOSSARY/no_main.md "The crate attribute that removes the Rust main() runtime") — removes the `main` runtime.
-- [`panic-handler`](../../GLOSSARY/panic-handler.md "The function Rust calls when a kernel panics") — what runs when things go wrong.
-- [`freestanding`](../../GLOSSARY/freestanding.md "Code compiled assuming no OS or standard library exists") — the umbrella concept.
-- [`extern-c`](../../GLOSSARY/extern-c.md "The C ABI linkage `extern \"C\"` provides") — why the ABI must match the bootloader.
+- [`no_std`](/GLOSSARY/no_std/ "The crate attribute that drops the standard library") — the crate attribute that removes `std`.
+- [`no_main`](/GLOSSARY/no_main/ "The crate attribute that removes the Rust main() runtime") — removes the `main` runtime.
+- [`panic-handler`](/GLOSSARY/panic-handler/ "The function Rust calls when a kernel panics") — what runs when things go wrong.
+- [`freestanding`](/GLOSSARY/freestanding/ "Code compiled assuming no OS or standard library exists") — the umbrella concept.
+- [`extern-c`](/GLOSSARY/extern-c/ "The C ABI linkage `extern \"C\"` provides") — why the ABI must match the bootloader.
 
 > **Bridge to OS concepts:** Rust's `no_std`/`no_main` are your first real
 > **what a runtime is and what it assumes** — a bridge to
-> [bootloaders](../../GLOSSARY/bootloader.md "A small program that loads your kernel into memory and jumps to it") and how a kernel is entered (concepts/01) and to **direct
-> hardware I/O** via the [VGA framebuffer](../../GLOSSARY/vga-framebuffer.md "The memory at 0xB8000 where screen text is written") (concepts/04). The `unsafe` raw
+> [bootloaders](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it") and how a kernel is entered (concepts/01) and to **direct
+> hardware I/O** via the [VGA framebuffer](/GLOSSARY/vga-framebuffer/ "The memory at 0xB8000 where screen text is written") (concepts/04). The `unsafe` raw
 > pointer, the never-returning `_start`, and the panic handler are Rust
 > spelling out the very rules C lets you swallow silently.
 
@@ -617,8 +617,8 @@ contains the blast radius of any memory bug.
 > **Next-step map:** this kernel stops at raw framebuffer writes. The Phil Opp
 > series (the `Writing an OS in Rust` videos above) turns it into a *safe*
 > `Writer` type in Part 3, adds a `println!` macro and testing, then moves into
-> CPU exceptions, the [IDT](../../GLOSSARY/idt.md "The table that tells the CPU where each interrupt handler lives"), [paging](../../GLOSSARY/paging.md "The memory-mapping mechanism that gives each process virtual memory") and
-> [heap allocation](../../GLOSSARY/heap-allocation.md "Kernel memory that can grow and be handed out at runtime"). Each of those maps to a concept chapter in this hub
+> CPU exceptions, the [IDT](/GLOSSARY/idt/ "The table that tells the CPU where each interrupt handler lives"), [paging](/GLOSSARY/paging/ "The memory-mapping mechanism that gives each process virtual memory") and
+> [heap allocation](/GLOSSARY/heap-allocation/ "Kernel memory that can grow and be handed out at runtime"). Each of those maps to a concept chapter in this hub
 > (concepts/03 interrupts, concepts/02 memory management). Start with the VGA
 > Writer — it's the smallest step that makes the framebuffer actually *safe*.
 

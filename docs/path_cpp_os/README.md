@@ -20,14 +20,14 @@ pointers look through a C++ lens with no runtime, then a guided build of the C++
 - **Where:** https://wiki.osdev.org/Bare_Bones
 - **License:** Open wiki (community-reviewed)
 - **Local copy:** [`Bare_Bones_Cpp.md`](Bare_Bones_Cpp.md)
-- **Why chosen:** The canonical free minimal-kernel tutorial, with an explicit C++ section. Writing a kernel in C++ is easy — you just give `kernel_main` [**C linkage**](../GLOSSARY/extern-c.md "C++ keyword giving a function C linkage so its name isn't mangled") (`extern "C"`) and compile with `-ffreestanding -fno-exceptions -fno-rtti`.
+- **Why chosen:** The canonical free minimal-kernel tutorial, with an explicit C++ section. Writing a kernel in C++ is easy — you just give `kernel_main` [**C linkage**](/GLOSSARY/extern-c/ "C++ keyword giving a function C linkage so its name isn't mangled") (`extern "C"`) and compile with `-ffreestanding -fno-exceptions -fno-rtti`.
 - **Key C++ specifics:**
   - `extern "C" void kernel_main()` — C linkage so the symbol name isn't mangled (the bootloader stub can call it).
   - Compile with `-ffreestanding -O2 -fno-exceptions -fno-rtti`.
   - Exceptions and RTTI are **not** available without runtime support — a great beginner lesson.
 
 ## What you'll build in this path
-A minimal C++ kernel ([VGA text mode](../GLOSSARY/vga-text-mode.md "The 80x25 character display mode a minimal kernel writes to")) with an `extern "C"` entry point, booted by [GRUB](../GLOSSARY/grub.md "A free, standard bootloader (GNU Grand Unified Bootloader)")/[Multiboot](../GLOSSARY/multiboot.md "The protocol that lets a bootloader load any kernel; magic 0x1BADB002").
+A minimal C++ kernel ([VGA text mode](/GLOSSARY/vga-text-mode/ "The 80x25 character display mode a minimal kernel writes to")) with an `extern "C"` entry point, booted by [GRUB](/GLOSSARY/grub/ "A free, standard bootloader (GNU Grand Unified Bootloader)")/[Multiboot](/GLOSSARY/multiboot/ "The protocol that lets a bootloader load any kernel; magic 0x1BADB002").
 
 ## Supporting material already in this hub
 - Fully-commented minimal implementation → [`Example_OS_Project/cpp/`](../Example_OS_Project/cpp/)
@@ -85,7 +85,7 @@ extern "C" void kernel_main() { ... }
 ```
 
 This is the single most important C++-specific lesson in the whole path, and it's what
-[`extern C`](../GLOSSARY/extern-c.md "C++ keyword giving a function C linkage so its name isn't mangled") refers to. You can verify it yourself:
+[`extern C`](/GLOSSARY/extern-c/ "C++ keyword giving a function C linkage so its name isn't mangled") refers to. You can verify it yourself:
 
 ```bash
 # Compile both versions and look at the exported symbols:
@@ -150,8 +150,8 @@ void clear() {
 
 ### 2.3 Why namespaces help a kernel stay organized
 
-When a kernel grows past "Hello World" you get a VGA driver, a [GDT](../GLOSSARY/gdt.md "A table describing memory segments the CPU uses in protected mode"), an
-[IDT](../GLOSSARY/idt.md "The kernel's table that tells the CPU where each interrupt handler lives"), an allocator, drivers. C++ namespaces let you group all of that without
+When a kernel grows past "Hello World" you get a VGA driver, a [GDT](/GLOSSARY/gdt/ "A table describing memory segments the CPU uses in protected mode"), an
+[IDT](/GLOSSARY/idt/ "The kernel's table that tells the CPU where each interrupt handler lives"), an allocator, drivers. C++ namespaces let you group all of that without
 name collisions and without a heavy OOP class hierarchy (which would invite RTTI). The
 reference kernel puts everything VGA-related inside a `namespace vga { }` — minimal, clean,
 zero runtime cost.
@@ -181,7 +181,7 @@ void  operator delete(void* p) noexcept  { /* YOUR allocator's free(p) */ }
 void  operator delete[](void* p) noexcept{ operator delete(p); }
 ```
 
-Until you've built a [heap allocator](../GLOSSARY/heap-allocation.md "Dynamically allocating memory at runtime, which a kernel must implement itself"), *don't* use `new`.
+Until you've built a [heap allocator](/GLOSSARY/heap-allocation/ "Dynamically allocating memory at runtime, which a kernel must implement itself"), *don't* use `new`.
 That's why the reference Hello World kernel uses static buffers and the stack — no dynamic
 allocation needed. This is the C++-flavoured version of the C lesson "a kernel must become its
 own memory manager."
@@ -504,7 +504,7 @@ functions make it pleasant to read, with no runtime cost.
 
 > **Try it:** extend `write_at` to accept a *column* too, and print a triangle or a small
 > bar chart to the text screen. You've just started down the path that eventually builds a
-> full graphical [VGA](../GLOSSARY/vga-text-mode.md "The 80x25 character display mode a minimal kernel writes to") console.
+> full graphical [VGA](/GLOSSARY/vga-text-mode/ "The 80x25 character display mode a minimal kernel writes to") console.
 
 ---
 
@@ -580,7 +580,7 @@ working end-to-end, and familiarity with the C track's build loop.
 - [ ] **H1. Provide `operator new` + a minimal allocator** (~3 hr). Build a simple bump (arena)
       allocator and wire it into `operator new` / `operator delete`, then allocate a small
       `int*` on the heap of your kernel and print its value. This is the C++ way to learn what a
-      [heap allocator](../GLOSSARY/heap-allocation.md "Dynamically allocating memory at runtime, which a kernel must implement itself") really is.
+      [heap allocator](/GLOSSARY/heap-allocation/ "Dynamically allocating memory at runtime, which a kernel must implement itself") really is.
 - [ ] **H2. Compare against C and Rust** (~1.5 hr). Put
       [`Example_OS_Project/cpp/kernel.c++`](../Example_OS_Project/cpp/kernel.c++) next to
       [`Example_OS_Project/c/kernel.c`](../Example_OS_Project/c/kernel.c) and the Rust `main.rs`.

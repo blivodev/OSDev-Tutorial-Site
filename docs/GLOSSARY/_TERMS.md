@@ -72,4 +72,4 @@ Format of each row:  `slug` | `Term (as it appears in docs)` | `one-line tooltip
 
 ---
 
-This is the contract: match these slugs EXACTLY in links (e.g. `[Multiboot](GLOSSARY/multiboot.md "tooltip")`). Tooltips may be trimmed, but keep the meaning.
+This is the contract: match these slugs EXACTLY in links (e.g. `[Multiboot](/GLOSSARY/multiboot/ "tooltip")`). Tooltips may be trimmed, but keep the meaning.
