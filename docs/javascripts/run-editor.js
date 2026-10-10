@@ -16,6 +16,19 @@
   var RUN_API = "https://run.sektor9.dev/run";   // Caddy -> runvps:8099 (osdev basic-auth)
   var LOADED = false;
 
+  // Preload basic-auth credentials for run.sektor9.dev only when this page
+  // actually has an editable kernel block. HTTP Basic auth is cached
+  // per-origin, so logging into osdev.sektor9.dev alone does NOT give the
+  // browser credentials for run.sektor9.dev. A silent credentialed fetch to
+  // the run host makes the browser send + cache those credentials, so the
+  // Run button's cross-origin POST carries them.
+  function preloadRunAuth() {
+    try {
+      fetch("https://run.sektor9.dev/health", { method: "GET", credentials: "include" })
+        .catch(function () { /* 401 expected until user supplies creds */ });
+    } catch (e) { /* ignore */ }
+  }
+
   function loadCodeMirror(cb) {
     if (LOADED || window.CodeMirror) { LOADED = true; return cb(); }
     var css = document.createElement("link");
@@ -152,6 +165,7 @@
         blocks.push(el);
       }
     });
+    if (blocks.length) preloadRunAuth();
     blocks.forEach(makeRunner);
   }
 
