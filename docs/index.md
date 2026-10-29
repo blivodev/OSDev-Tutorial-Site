@@ -53,4 +53,4 @@
 
 ---
 
-*Built with MkDocs Material · source: [OSDev-Tutorial-Site](https://github.com/YOUR_USERNAME/OSDev-Tutorial-Site) (private)*
+*Built with MkDocs Material*

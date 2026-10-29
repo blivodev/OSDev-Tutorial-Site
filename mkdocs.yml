@@ -1,7 +1,6 @@
 site_name: OSDev Learning Hub
 site_description: A beginner-friendly Operating System development learning resource — tutorials, glossary, and a 5-language "Hello World" OS.
 site_url: https://osdev.sektor9.dev/
-repo_url: https://github.com/YOUR_USERNAME/OSDev-Tutorial-Site
 edit_uri: ""
 
 theme:
