@@ -17,7 +17,7 @@ Rust needs **no cross-compiler** — just a nightly toolchain plus the `bootimag
 ## Primary Resource
 
 ### Writing an OS in Rust — Philipp Oppermann (phil-opp)
-- **Where:** https://os.phil-opp.com/ | https://github.com/phil-opp/blog_os
+- **Where:** [https://os.phil-opp.com/](https://os.phil-opp.com/) | [https://github.com/phil-opp/blog_os](https://github.com/phil-opp/blog_os)
 - **License:** Free; blog content CC-BY-NC, code Apache-2.0/MIT
 - **Local copy:** [blog_os source on GitHub](https://github.com/phil-opp/blog_os)rkdown post sources under `blog/content/edition-2/`)
 - **Why chosen:** *The* most famous free Rust OS-development series. Perfectly matches **Path B (Rust beginner → OS beginner)**. Text-heavy, diagram-rich, step-by-step. Covers `no_std` [freestanding](/GLOSSARY/freestanding/ "Code compiled assuming no OS or standard library exists") binaries, [panic handler](/GLOSSARY/panic-handler/ "The function that runs when a Rust kernel panics (no OS to report to)"), [bootloader](/GLOSSARY/bootloader/ "A small program that loads your kernel into memory and jumps to it") + `bootimage` boot, VGA text buffer, [interrupts](/GLOSSARY/interrupt/ "A hardware signal that makes the CPU run a registered handler"), [paging](/GLOSSARY/paging/ "Translates virtual addresses to physical RAM via page tables"), [heap allocation](/GLOSSARY/heap-allocation/ "Dynamically allocating memory at runtime; a kernel does it itself"), and more.

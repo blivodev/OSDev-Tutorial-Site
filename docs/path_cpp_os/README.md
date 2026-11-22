@@ -17,7 +17,7 @@ pointers look through a C++ lens with no runtime, then a guided build of the C++
 ## Primary Resource
 
 ### OSDev Wiki — Bare Bones (C++ variant)
-- **Where:** https://wiki.osdev.org/Bare_Bones
+- **Where:** [https://wiki.osdev.org/Bare_Bones](https://wiki.osdev.org/Bare_Bones)
 - **License:** Open wiki (community-reviewed)
 - **Local copy:** [`Bare_Bones_Cpp.md`](Bare_Bones_Cpp.md)
 - **Why chosen:** The canonical free minimal-kernel tutorial, with an explicit C++ section. Writing a kernel in C++ is easy — you just give `kernel_main` [**C linkage**](/GLOSSARY/extern-c/ "C++ keyword giving a function C linkage so its name isn't mangled") (`extern "C"`) and compile with `-ffreestanding -fno-exceptions -fno-rtti`.

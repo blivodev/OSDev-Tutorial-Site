@@ -1,6 +1,6 @@
 # OSDev Wiki — Bare Bones (C++ variant)
 
-> Source: https://wiki.osdev.org/Bare_Bones (C++ section) — community-reviewed.
+> Source: [https://wiki.osdev.org/Bare_Bones](https://wiki.osdev.org/Bare_Bones) (C++ section) — community-reviewed.
 > This is a **converted/summarized** reference copy for offline reading.
 
 ---

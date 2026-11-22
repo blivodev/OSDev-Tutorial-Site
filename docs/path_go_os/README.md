@@ -21,7 +21,7 @@ of it (same `boot.s`, same `linker.ld`, same Multiboot recipe).
 ## Primary Resource
 
 ### OSDev Wiki — Go Bare Bones
-- **Where:** https://wiki.osdev.org/Go_Bare_Bones
+- **Where:** [https://wiki.osdev.org/Go_Bare_Bones](https://wiki.osdev.org/Go_Bare_Bones)
 - **License:** Open wiki (community-reviewed)
 - **Local copy:** [`Go_Bare_Bones.md`](Go_Bare_Bones.md)
 - **Difficulty:** Medium (it's built on top of the C Bare Bones tutorial)

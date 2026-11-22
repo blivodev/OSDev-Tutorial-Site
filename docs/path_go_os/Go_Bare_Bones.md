@@ -1,6 +1,6 @@
 # OSDev Wiki — Go Bare Bones
 
-> Source: https://wiki.osdev.org/Go_Bare_Bones — community-reviewed (difficulty: Medium).
+> Source: [https://wiki.osdev.org/Go_Bare_Bones](https://wiki.osdev.org/Go_Bare_Bones) — community-reviewed (difficulty: Medium).
 > This is a **converted/summarized** reference copy for offline reading.
 
 ---

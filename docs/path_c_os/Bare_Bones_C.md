@@ -1,6 +1,6 @@
 # OSDev Wiki — Bare Bones (C)
 
-> Source: https://wiki.osdev.org/Bare_Bones — community-reviewed, beginner minimal-kernel tutorial.
+> Source: [https://wiki.osdev.org/Bare_Bones](https://wiki.osdev.org/Bare_Bones) — community-reviewed, beginner minimal-kernel tutorial.
 > This is a **converted/summarized** reference copy for offline reading. Full authoritative version at the URL above; 32-bit x86 kernel booted by GRUB/Multiboot.
 
 ---

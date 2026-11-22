@@ -23,7 +23,7 @@ kernel from [`Example_OS_Project/csharp/`](../Example_OS_Project/csharp/).
 ## Primary Resource
 
 ### Cosmos OS — C# Open-Source Managed Operating System
-- **Where:** https://www.gocosmos.org/ | https://github.com/CosmosOS/Cosmos
+- **Where:** [https://www.gocosmos.org/](https://www.gocosmos.org/) | [https://github.com/CosmosOS/Cosmos](https://github.com/CosmosOS/Cosmos)
 - **License:** Open source (BSD)
 - **Local copy:** [Cosmos source on GitHub](https://github.com/CosmosOS/Cosmos)
 - **What it is:** An "Operating System **Kit**" (OS Legos). You author your kernel in modern C#; [Cosmos](/GLOSSARY/cosmos/ "An open-source C# operating-system kit") (via [NativeAOT](/GLOSSARY/nativeaot/ ".NET's ahead-of-time compiler that turns IL into native code") / [IL2CPU](/GLOSSARY/il2cpu/ "Cosmos's original IL-to-x86 compiler")) compiles it down to a bootable ISO loaded by the **[Limine](/GLOSSARY/limine/ "A modern bootloader supporting Multiboot 2 and 64-bit kernels")** bootloader. Supports x64 and ARM64. Includes its own GC, scheduler, drivers, network, filesystem.
@@ -400,7 +400,7 @@ Console.WriteLine("MY-OS-V1 booted.");
 |---------|-------|---------------|
 | The C path (foundation) | [`path_c_os/README.md`](../path_c_os/README.md) | learn what a framebuffer/boot actually *is* before C#'s abstractions hide it |
 | The C# chapter deep-dive | [`synthesized_tutorials/05-csharp/README.md`](../synthesized_tutorials/05-csharp/README.md) | the full "why C# is different" argument |
-| Cosmos Getting Started | https://github.com/CosmosOS/Cosmos/wiki/Getting-Started | the official first-boot walkthrough |
+| Cosmos Getting Started | [https://github.com/CosmosOS/Cosmos/wiki/Getting-Started](https://github.com/CosmosOS/Cosmos/wiki/Getting-Started) | the official first-boot walkthrough |
 | Cosmos internals (IL2CPU/NativeAOT) | [`csharp/README.md`](../Example_OS_Project/csharp/README.md) + the Cosmos wiki | understand how your IL becomes native |
 | VGA / GUI in Cosmos | [`concepts/04-vga-text-mode.md`](../synthesized_tutorials/concepts/04-vga-text-mode.md) + Cosmos graphics docs | grow from text console to graphics |
 | Memory management | [`concepts/02-memory-management.md`](../synthesized_tutorials/concepts/02-memory-management.md) | the theory behind the GC you rely on |

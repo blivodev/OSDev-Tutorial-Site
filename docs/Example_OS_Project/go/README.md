@@ -42,7 +42,7 @@ export TARGET=i686-elf
 export PATH="$PREFIX/bin:$PATH"
 
 # binutils
-wget https://ftp.gnu.org/gnu/binutils/binutils-2.41.tar.xz
+wget [https://ftp.gnu.org/gnu/binutils/binutils-2.41.tar.xz](https://ftp.gnu.org/gnu/binutils/binutils-2.41.tar.xz)
 tar xf binutils-2.41.tar.xz && cd binutils-2.41
 mkdir build && cd build
 ../configure --target=$TARGET --prefix="$PREFIX" --with-sysroot \
@@ -51,7 +51,7 @@ make -j$(nproc) && make install
 
 # gcc (enable go!)
 cd ../..
-wget https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz
+wget [https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz](https://ftp.gnu.org/gnu/gcc/gcc-13.2.0/gcc-13.2.0.tar.xz)
 tar xf gcc-13.2.0.tar.xz && cd gcc-13.2.0
 mkdir build && cd build
 ../configure --target=$TARGET --prefix="$PREFIX" --disable-nls \
